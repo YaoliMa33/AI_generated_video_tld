@@ -1,91 +1,86 @@
-# Project Title
+# The Last Data
 
-Short description of the project in 2 to 4 sentences.
+This repository contains the code and documentation for a two-part AI video assignment workflow.
 
-Explain:
+Part 1 is the **Code/NLP Workflow**. A Python program reads the source script, prompt workbook, scene notes, reference images, generated clip paths, and iteration notes. It then calls a local Ollama LLM API and saves a prompt table, storyboard summary, production manifest, and iteration log.
 
-* What problem does this project solve?
-* What does the program do?
-* What is the main result or output?
+Part 2 is the **Manual AI Video Production Workflow**. The final prompts are entered manually into AI video tools such as WeDaVinci, PixVerse.ai, and Seedance. The generated clips are saved, edited, and exported as the final video and presentation.
+
+The repository does not automate WeDaVinci, PixVerse.ai, or Seedance access. No platform credentials, cookies, or private API tokens are stored in this project.
 
 ## Authors
 
-Name(s):
-Course:
-University:
-Semester / Year:
+Name(s): Yaoli Ma, Ziyu Guo  
+Course: NLP 2026  
+University: Technical University of Munich  
+Semester / Year: Summer 2026
 
 ## Project Overview
 
-Briefly explain the idea behind the project.
+The video, **The Last Data**, is a short cinematic AI-generated film about a future architectural data worker who believes scanning and uploading civilization data is meaningless. During an extinction-level impact alert, the conflict between the protagonist and the boss escalates. After the catastrophe, the protagonist wakes in ruins, discovers the `CIVILIZATION ARCHIVE` hard drive, and the stored data becomes the basis for rebuilding the city as blue holographic architecture.
 
-Include:
-
-* The goal of the project
-* The main approach or method used
-* Any important assumptions
-* The expected input and output
+The code does not generate the final video directly. Its role is to make the prompt workflow reproducible: it extracts the workbook-based prompt process into a structured JSON config, validates declared media paths, calls Ollama, and writes reviewable output artifacts.
 
 ## Repository Structure
 
 ```text
 .
-├── README.md
-├── requirements.txt
-├── src/
-│   └── main.py
-├── data/
-│   ├── input/
-│   └── output/
-├── docs/
-│   └── documentation.pdf
-├── presentation/
-│   └── presentation.pptx
-└── examples/
+|-- README.md
+|-- requirements.txt
+|-- src/
+|   |-- build_config_from_workbook.py
+|   |-- main.py
+|   `-- ollama_client.py
+|-- data/
+|   |-- input/
+|   |   |-- prompt_image_video.xlsx
+|   |   |-- workbook_nonempty_cells.json
+|   |   |-- project_config.json
+|   |   |-- project_config.example.json
+|   |   |-- media/
+|   |   |   `-- final_video.mp4
+|   |   `-- source_package/
+|   `-- output/
+|       |-- prompt_table.csv
+|       |-- iteration_log.md
+|       |-- iteration_log.json
+|       |-- production_manifest.json
+|       |-- storyboard.json
+|       `-- wedavinci_upload_prompts.md
+|-- docs/
+|   `-- technical_documentation.md
+`-- presentation/
 ```
 
-Explain the most important folders and files:
-
-| Path            | Description                                                     |
-| --------------- | --------------------------------------------------------------- |
-| `src/`          | Source code for the project                                     |
-| `data/input/`   | Input files needed to run the project                           |
-| `data/output/`  | Output files produced by the project                            |
-| `docs/`         | Additional documentation, notes, learnings, or reports          |
-| `presentation/` | Final presentation slides in PowerPoint, PDF, or another format |
-| `examples/`     | Optional example files or sample runs                           |
-
-Adjust the structure above to match your actual repository.
+| Path | Description |
+| --- | --- |
+| `src/build_config_from_workbook.py` | Converts the prompt workbook into `data/input/project_config.json` |
+| `src/main.py` | Validates the config, calls Ollama, and writes output artifacts |
+| `src/ollama_client.py` | Local Ollama HTTP API client |
+| `data/input/prompt_image_video.xlsx` | Original prompt/process workbook |
+| `data/input/source_package/` | Original prompt package with reference images and generated clips |
+| `data/input/media/final_video.mp4` | Final exported video provided for submission |
+| `data/output/` | Generated prompt table, iteration log, manifest, storyboard, and manual upload package |
+| `docs/` | Technical workflow documentation |
 
 ## Requirements
 
-List what is needed to run the project.
+- Python 3.10 or newer
+- Python package listed in `requirements.txt`: `openpyxl`
+- A running local Ollama HTTP service
+- Local Ollama model configured in `data/input/project_config.json`
+  - Current local configuration: `gemma3:1b`
+  - API mode: `/api/generate`
+- Manual access to WeDaVinci, PixVerse.ai, Seedance, or equivalent video generation tools
 
-Example:
-
-* Python 3.x
-* Required Python packages listed in `requirements.txt`
-* Any external tools, APIs, datasets, models, or credentials needed
+Ollama runs locally and normally does not require an external API key.
 
 ## Setup Instructions
 
-Explain how to set up the project from a fresh clone.
-
 ```bash
-git clone <repository-url>
-cd <repository-name>
-```
-
-Create and activate a virtual environment:
-
-```bash
+git clone https://gitlab.lrz.de/nlp2026/yazimaguo/nlp2026_yazimaguo.git
+cd nlp2026_yazimaguo
 python -m venv .venv
-```
-
-On macOS / Linux:
-
-```bash
-source .venv/bin/activate
 ```
 
 On Windows:
@@ -94,116 +89,105 @@ On Windows:
 .venv\Scripts\activate
 ```
 
+On macOS / Linux:
+
+```bash
+source .venv/bin/activate
+```
+
 Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+Start Ollama and make sure the configured model is available:
+
+```bash
+ollama pull gemma3:1b
+ollama serve
+```
+
 ## How to Run the Project
 
-Explain the exact command needed to run the project.
-
-Example:
+First rebuild the structured project config from the prompt workbook:
 
 ```bash
-python src/main.py
+python src/build_config_from_workbook.py --workbook data/input/prompt_image_video.xlsx --input-dir data/input --output data/input/project_config.json
 ```
 
-If arguments are needed, explain them clearly:
+Validate the config without calling Ollama:
 
 ```bash
-python src/main.py --input data/input/example.csv --output data/output/result.csv
+python src/main.py --config data/input/project_config.json --output data/output --dry-run
 ```
 
-Describe what should happen when the command is run.
+Generate the production files through Ollama:
+
+```bash
+python src/main.py --config data/input/project_config.json --output data/output
+```
+
+The script writes the prompt table, iteration log, storyboard summary, production manifest, and manual upload prompt package to `data/output/`.
 
 ## Input Files
 
-List all input files required to run the project.
+| File | Location | Description |
+| --- | --- | --- |
+| `prompt_image_video.xlsx` | `data/input/prompt_image_video.xlsx` | Original workbook containing prompt process, final prompts, tool choices, reference paths, and output paths |
+| `project_config.json` | `data/input/project_config.json` | Structured config generated from the workbook |
+| `workbook_nonempty_cells.json` | `data/input/workbook_nonempty_cells.json` | Audit extraction of non-empty workbook cells |
+| Reference images and clips | `data/input/source_package/` | Original production assets and selected generated clips |
+| Final video | `data/input/media/final_video.mp4` | Final exported video |
 
-| File          | Location                 | Description                            |
-| ------------- | ------------------------ | -------------------------------------- |
-| `example.csv` | `data/input/example.csv` | Example input data used by the program |
-
-Explain:
-
-* What format the input files must have
-* Whether sample input files are included
-* Where larger files can be found, if they are not stored in GitLab
-* Whether any files need to be downloaded manually
+All declared media paths are validated. If a path is declared but the file does not exist, the program stops with an explicit error.
 
 ## Output Files
 
-List all output files created by the project.
-
-| File         | Location                 | Description            |
-| ------------ | ------------------------ | ---------------------- |
-| `result.csv` | `data/output/result.csv` | Final processed output |
-
-Explain:
-
-* What output files are generated
-* Where they are saved
-* How to interpret them
-* Whether example output files are included in the repository
+| File | Location | Description |
+| --- | --- | --- |
+| `prompt_table.csv` | `data/output/prompt_table.csv` | Shot-by-shot prompt table for review and submission evidence |
+| `iteration_log.md` | `data/output/iteration_log.md` | Human-readable prompt iteration record |
+| `iteration_log.json` | `data/output/iteration_log.json` | Machine-readable iteration history and latest Ollama output |
+| `production_manifest.json` | `data/output/production_manifest.json` | Project metadata, shot count, declared assets, and generated file list |
+| `storyboard.json` | `data/output/storyboard.json` | Raw Ollama storyboard summary output |
+| `wedavinci_upload_prompts.md` | `data/output/wedavinci_upload_prompts.md` | Human-readable prompt package for manual video-tool upload |
 
 ## Reproducing the Results
 
-Explain how another person can reproduce your results from start to finish.
-
-Example:
-
 1. Clone the repository.
-2. Create a virtual environment.
-3. Install the dependencies.
-4. Place the required input files in `data/input/`.
-5. Run the main script.
-6. Check the results in `data/output/`.
+2. Create and activate a virtual environment.
+3. Install dependencies with `pip install -r requirements.txt`.
+4. Start Ollama and make sure `gemma3:1b` is available, or edit `data/input/project_config.json` to use another local model.
+5. Rebuild the config from the workbook with `src/build_config_from_workbook.py`.
+6. Run `src/main.py` to generate `data/output/`.
+7. Review `data/output/prompt_table.csv` and `data/output/iteration_log.md`.
+8. Manually upload or paste the selected prompts into WeDaVinci, PixVerse.ai, Seedance, or another chosen AI video tool.
+9. Save generated clips, edit them manually, and export the final video.
 
 ## Additional Documentation
 
-Add links or paths to additional documentation.
-
-Examples:
-
-* Full documentation: `docs/documentation.pdf`
-* Project notes and learnings: `docs/learnings.md`
-* Technical explanation: `docs/technical_documentation.md`
-
-The documentation should explain the most important learnings, design decisions, problems encountered, and how they were solved.
+- Technical documentation: `docs/technical_documentation.md`
 
 ## Presentation
 
-Add the final presentation file here.
+Presentation file: `presentation/the-last-data_final_presentation.pptx`
 
-Examples:
-
-* PowerPoint presentation: `presentation/final_presentation.pptx`
-* PDF version: `presentation/final_presentation.pdf`
-* Alternative format: `presentation/final_presentation.key`
-
-The presentation file should be included in the repository unless it is too large. If it is stored elsewhere, provide a working link and access instructions.
+Final video: `data/input/media/final_video.mp4`
 
 ## Important Notes
 
-Mention anything another person should know before running the project.
-
-Examples:
-
-* Known limitations
-* Missing features
-* Required manual steps
-* Large files that are not included
-* API keys or credentials that are needed but not committed to the repository
+- Video generation is manual and may use WeDaVinci, PixVerse.ai, Seedance, or another selected tool.
+- The local Ollama model is used for workflow summarization and prompt-structure support. The full production prompts are preserved directly from the workbook in `prompt_table.csv` and `wedavinci_upload_prompts.md`.
+- The code does not upload private credentials.
+- The program fails explicitly for missing declared files instead of silently ignoring them.
+- Some original workbook text and extracted paths may preserve the encoding of the submitted source files. The original workbook is included for auditability.
 
 ## Troubleshooting
 
-List common problems and how to fix them.
-
-| Problem                    | Possible Solution                                 |
-| -------------------------- | ------------------------------------------------- |
-| Package installation fails | Check Python version and reinstall dependencies   |
-| File not found error       | Make sure input files are placed in `data/input/` |
-| Output is empty            | Check that the input file format is correct       |
-
+| Problem | Possible Solution |
+| --- | --- |
+| Ollama connection fails | Check that `ollama serve` is running and that `ollama.base_url` is correct in `project_config.json` |
+| Model not found | Pull the configured model with `ollama pull gemma3:1b` or update `ollama.text_model` |
+| File not found error | Check that every declared `image_path` and `video_path` exists relative to `data/input/` |
+| Empty or vague Ollama output | Use a stronger local Ollama model and rerun `src/main.py` |

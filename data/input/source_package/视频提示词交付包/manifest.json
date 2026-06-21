@@ -1,0 +1,84 @@
+{
+  "package": "C:\\Users\\candi\\Documents\\Natural Language Project\\documentation\\视频提示词交付包",
+  "items": [
+    {
+      "path": "工作留痕\\prompt_image_video.xlsx",
+      "type": "file",
+      "status": "copied",
+      "bytes": 36544
+    },
+    {
+      "path": "工作留痕\\S2S1_hands.png",
+      "type": "file",
+      "status": "copied",
+      "bytes": 1054072
+    },
+    {
+      "path": "工作留痕\\S2S2_hit.png",
+      "type": "file",
+      "status": "copied",
+      "bytes": 2367746
+    },
+    {
+      "path": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-1",
+      "type": "dir",
+      "status": "copied",
+      "files": 3,
+      "bytes": 25130639
+    },
+    {
+      "path": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-2",
+      "type": "dir",
+      "status": "copied",
+      "files": 2,
+      "bytes": 31082494
+    },
+    {
+      "path": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-3",
+      "type": "dir",
+      "status": "copied",
+      "files": 3,
+      "bytes": 21905757
+    },
+    {
+      "path": "工作留痕\\The_Blueprint\\scene-4-Scene_2_hit\\shot-1\\variant-1-selected.mp4",
+      "type": "file",
+      "status": "copied",
+      "bytes": 13781830
+    },
+    {
+      "path": "工作留痕\\The_Blueprint\\scene-5-Scene_5\\shot-1\\variant-1-selected.mp4",
+      "type": "file",
+      "status": "copied",
+      "bytes": 32979886
+    },
+    {
+      "path": "工作留痕\\image_referrence_for_seedance_s3-1",
+      "type": "dir",
+      "status": "copied",
+      "files": 8,
+      "bytes": 11052678
+    },
+    {
+      "path": "工作留痕\\image_referrence_for_seedance_s4",
+      "type": "dir",
+      "status": "copied",
+      "files": 9,
+      "bytes": 14143340
+    },
+    {
+      "path": "工作留痕\\shorts_need\\s3-1_wake.mp4",
+      "type": "file",
+      "status": "copied",
+      "bytes": 23924387
+    },
+    {
+      "path": "工作留痕\\shorts_need\\s4 seedance_onecut.mp4",
+      "type": "file",
+      "status": "copied",
+      "bytes": 94644264
+    }
+  ],
+  "file_count": 32,
+  "bytes": 272103637
+}

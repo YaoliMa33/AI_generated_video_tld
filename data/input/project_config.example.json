@@ -1,0 +1,46 @@
+{
+  "project": {
+    "title": "AI Video Project",
+    "authors": ["Author One", "Author Two"],
+    "course": "NLP 2026",
+    "university": "LMU/TUM",
+    "semester": "Summer 2026",
+    "target_platform": "WeDaVinci manual upload",
+    "aspect_ratio": "9:16",
+    "final_video_path": ""
+  },
+  "source_script": "Paste the original story idea, narration draft, scene script, or creative brief here.",
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "api_mode": "generate",
+    "text_model": "gemma3:1b",
+    "vision_model": "llama3.2-vision"
+  },
+  "global_constraints": [
+    "The final video is generated from text prompts and intermediate images.",
+    "The code must not call WeDaVinci directly; WeDaVinci upload is manual.",
+    "Prompts must preserve scene order and visual continuity.",
+    "Do not invent assets, scenes, dialogue, or generation steps that are not present in the input config."
+  ],
+  "iteration_history": [
+    {
+      "version": "v1",
+      "date": "2026-06-21",
+      "change": "Initial script-to-prompt conversion.",
+      "reason": "Create a first structured prompt plan from the input script.",
+      "result": "Draft prompts prepared for review."
+    }
+  ],
+  "shots": [
+    {
+      "id": "scene_01",
+      "title": "Opening Scene",
+      "time_range": "0-8s",
+      "image_path": "",
+      "video_path": "",
+      "image_prompt": "Original image-generation prompt goes here.",
+      "video_prompt": "Original image-to-video prompt goes here.",
+      "notes": "Describe visible scene content, motion, continuity requirements, or editing notes."
+    }
+  ]
+}

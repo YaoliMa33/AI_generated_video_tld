@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+work/
+presentation/source_ppt_v2.pptx
+presentation/*.inspect.ndjson

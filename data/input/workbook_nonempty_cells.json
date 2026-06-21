@@ -1,0 +1,904 @@
+{
+  "prompt_process": [
+    [
+      {
+        "cell": "A1",
+        "value": "场景信息"
+      },
+      {
+        "cell": "B1",
+        "value": "S01"
+      },
+      {
+        "cell": "F1",
+        "value": "S02"
+      },
+      {
+        "cell": "J1",
+        "value": "s03"
+      },
+      {
+        "cell": "P1",
+        "value": "S04一镜到底"
+      }
+    ],
+    [
+      {
+        "cell": "A2",
+        "value": "Shot ID"
+      },
+      {
+        "cell": "B2",
+        "value": "S01 老板骂员工"
+      },
+      {
+        "cell": "D2",
+        "value": "S01-2 警报响起，提醒撤离"
+      },
+      {
+        "cell": "F2",
+        "value": "S02-1 近景握拳"
+      },
+      {
+        "cell": "G2",
+        "value": "s02-2 爆发"
+      },
+      {
+        "cell": "H2",
+        "value": "s3-末日"
+      },
+      {
+        "cell": "J2",
+        "value": "s03-1苏醒"
+      },
+      {
+        "cell": "M2",
+        "value": "s03-2启动"
+      },
+      {
+        "cell": "P2",
+        "value": "S04 重建一镜到底"
+      }
+    ],
+    [
+      {
+        "cell": "A3",
+        "value": "时长"
+      },
+      {
+        "cell": "B3",
+        "value": "0-7秒"
+      },
+      {
+        "cell": "D3",
+        "value": "7-13秒"
+      },
+      {
+        "cell": "F3",
+        "value": "13-21秒"
+      },
+      {
+        "cell": "P3",
+        "value": "21-28秒"
+      }
+    ],
+    [
+      {
+        "cell": "A4",
+        "value": "状态"
+      },
+      {
+        "cell": "B4",
+        "value": "待生成"
+      },
+      {
+        "cell": "D4",
+        "value": "待填写"
+      },
+      {
+        "cell": "F4",
+        "value": "待填写"
+      },
+      {
+        "cell": "P4",
+        "value": "待填写"
+      }
+    ],
+    [
+      {
+        "cell": "A5",
+        "value": "参考图/视频"
+      }
+    ],
+    [
+      {
+        "cell": "A6",
+        "value": "连续性锁定"
+      },
+      {
+        "cell": "B6",
+        "value": "保持同一个未来建筑文明数据办公室，同一个主人公，同一个老板，同一张桌子，同一组蓝色建筑扫描屏幕，同一个窗外城市背景。不得更换办公室、人物、服装、镜头角度。"
+      },
+      {
+        "cell": "D6",
+        "value": "保持同一个未来建筑文明数据办公室、同一个主人公、同一个老板、同一张桌子、同一组蓝色建筑扫描屏幕、同一个窗外城市背景。承接上一镜最后一秒的屏幕异常闪烁。不得更换办公室、人物、服装、镜头角度。"
+      },
+      {
+        "cell": "J6",
+        "value": "第一人称视角从昏迷中缓慢苏醒，眼皮半睁半闭，模糊失焦，耳鸣。镜头静止数秒后逐渐恢复聚焦。随后主人公缓慢抬起头，从地面视角看向远方。随着视线抬升，越来越多毁灭后的未来城市进入画面。断裂摩天大楼、燃烧废墟、浓烟、崩塌建筑逐渐显现。主人公被眼前景象震撼，动作停滞，长时间凝视整个末日城市。"
+      },
+      {
+        "cell": "P6",
+        "value": "固定镜头。\n\n世界末日后的废墟。\n\n教堂已经坍塌。\n\n地面布满碎石和残骸。\n\n浓烟缓慢飘动。\n\n空气中漂浮灰尘。\n\n远处偶尔有火光。\n\n超写实。\n\n电影级灾难场景。"
+      }
+    ],
+    [
+      {
+        "cell": "A7",
+        "value": "镜头"
+      },
+      {
+        "cell": "B7",
+        "value": "中景偏全景，略微俯拍，缓慢推近，50mm标准焦距，稳定镜头。"
+      },
+      {
+        "cell": "D7",
+        "value": "中景偏全景，略微仰拍，稳定镜头。镜头跟随主人公视线略微向上，逐渐推向老板和红色警报光。"
+      },
+      {
+        "cell": "J7",
+        "value": "灵感-第二版一镜到底"
+      },
+      {
+        "cell": "P7",
+        "value": "固定镜头。\n\n废墟地面开始出现蓝色扫描光。\n\n无数蓝色粒子从地下升起。\n从无到有，光影迅速构建出建筑的轮廓线条，并按顺时针快转动。蓝色的全息网格向上快速生长、扫描，最终形成完整的全息建筑影像，发光强度高，科技感。\n\n"
+      }
+    ],
+    [
+      {
+        "cell": "A8",
+        "value": "开场画面"
+      },
+      {
+        "cell": "B8",
+        "value": "主人公坐在桌前，右手拿黑色硬盘，蓝色全息建筑模型在桌面上方缓慢旋转，多个屏幕显示建筑扫描界面和上传进度。"
+      },
+      {
+        "cell": "J8",
+        "value": "图片生成：\n\n第一人称视角。\n\n仰面躺在末日废墟之中。\n\n镜头紧贴地面。\n\n刚从昏迷中苏醒。\n\n视线已经基本恢复清晰，但仍残留轻微失焦感。\n\n前景是灰蒙蒙的天空。\n\n几根扭曲钢筋从画面两侧伸向天空。\n\n空气中漂浮灰烬与火星。\n\n天空被浓密烟尘覆盖。\n\n孤独、震撼、死寂。\n\n电影级构图。\n\n超写实风格。\n\n沉浸式第一人称视角。\n\n灾难电影质感。\n\n体积烟雾。\n\n真实光影。\n\n8K超高清"
+      },
+      {
+        "cell": "K8",
+        "value": "运镜：\n\n黑屏开始。\n\n模拟真实人类从昏迷中苏醒。\n\n强烈耳鸣。\n\n沉重呼吸。\n\n眼皮半睁半闭。\n\n视野被眼皮阴影遮挡。\n\n第一次睁眼挣到一半又闭上四分之一。\n\n后缓慢重新睁开。\n\n画面逐渐显现。\n\n模糊失焦。\n\n轻微重影。\n\n焦点不断调整。\n\n最终聚焦到眼前的末日废墟。\n\n镜头保持第一人称视角。\n\n仿佛刚刚恢复意识。\n\n情绪震惊、茫然、难以置信。\n\n电影级沉浸式体验。\n\n不要出现：第三视角、主人公的脸、主人公本人"
+      },
+      {
+        "cell": "L8",
+        "value": "即梦一镜到底prompt：\n\n黑屏开始。强烈耳鸣、沉重呼吸、远处建筑坍塌声与金属摩擦声。第一人称视角。眼皮半睁半闭，黑色眼皮阴影遮挡视野。第一次睁眼仅睁开一半又无力闭合，随后缓慢重新睁开。画面逐渐显现，模糊失焦，轻微重影，焦点不断恢复。最终聚焦到废墟中的天空视角。一镜到底，真实人类昏迷后苏醒效果。"
+      },
+      {
+        "cell": "M8",
+        "value": "保持同一个主人公、同一个废墟场景、同一个硬盘。\n\n超特写镜头，微距镜头，浅景深。\n\n布满灰尘的黑色移动硬盘占据画面主体，废墟城市完全虚化。\n\n主人公右手缓缓抬起，露出压在掌下的硬盘。\n\n镜头轻微推进。\n\n主人公拿起硬盘，用手擦去表面灰尘。\n\n硬盘外壳逐渐显现。\n\n最后一秒，硬盘突然亮起蓝色启动灯，一道蓝色扫描光快速掠过表面。\n\n电子启动音响起。\n\n镜头定格在发光硬盘上。\n\ncinematic macro close-up, photorealistic, shallow depth of field, floating dust, blue technology glow, smooth camera movement, post-apocalyptic atmosphere, 9:16 vertical."
+      },
+      {
+        "cell": "P8",
+        "value": "镜头快速拉近\n\n穿过末日城市。\n\n两侧是倒塌建筑。\n\n浓烟弥漫。\n\n街道被废墟覆盖。\n\n镜头从楼宇之间高速穿梭。\n\n飞快向前推进\n\n来到图二Tum钟楼场景"
+      }
+    ],
+    [
+      {
+        "cell": "A9",
+        "value": "站位构图"
+      },
+      {
+        "cell": "B9",
+        "value": "前低后高压迫位，主人公在前景坐着，老板在后方站立并俯身施压，视觉焦点在主人公和主屏幕。"
+      },
+      {
+        "cell": "J9",
+        "value": "刚从废墟中撑起身体坐起来。\n\n视线高度明显高于地面。\n\n前景是开裂的道路、碎裂混凝土、散落钢筋与玻璃残骸。\n\n空气中漂浮灰烬与火星。\n\n远处数栋未来摩天大楼已经坍塌。\n\n钢铁骨架裸露。\n\n火焰持续燃烧。\n\n浓烟滚滚升起。\n\n整个城市笼罩在灰暗烟尘之中。\n\n世界末日后的未来文明遗迹。\n\n画面充满震撼与死寂。\n\n仿佛第一次意识到灾难已经发生。\n\n沉浸式第一人称视角。\n\n电影级写实风格。\n\n超真实灾难场景。\n\n末日废土氛围。\n\n8K超高清"
+      },
+      {
+        "cell": "K9",
+        "value": "镜头开始向前上方运动。\n\n仿佛用双手撑住地面。\n\n身体艰难发力。\n\n视线缓慢脱离天空。\n\n画面下移。\n\n钢筋与烟雾从视野中缓缓向上滑出。\n\n废墟逐渐进入画面。\n\n镜头高度持续上升。\n\n从仰躺视角逐渐变成坐姿视角。\n\n动作缓慢而真实。\n\n伴随轻微身体晃动。\n\n仿佛经历剧烈撞击后艰难起身。\n\n随着视线抬高。\n\n前景出现碎裂道路、混凝土残骸、破损车辆。\n\n中景出现坍塌高架桥与燃烧建筑。\n\n远处未来城市轮廓逐渐显现。\n\n越来越多倒塌的摩天大楼进入视野。\n\n缓慢节奏。\n\n灾难电影质感\n\n整个过程保持第一人称视角，不出现人物身体正面，不出现第三人称镜头，不切镜头，一镜到底。"
+      },
+      {
+        "cell": "L9",
+        "value": "第一人称视角保持不变。主人公用双手撑住地面缓慢起身，镜头从仰躺视角逐渐抬升至坐姿视角。视线从天空转向前方废墟。越来越多毁灭后的城市进入视野。真实人体运动轨迹，轻微晃动与呼吸感，一镜到底。"
+      },
+      {
+        "cell": "M9",
+        "value": "\n即梦提示词：\n\n主体：@97522b4e-4062-4154-a28e-dd62e3916928中穿灰棕色夹克的年轻白人男性；@688064d0-f19f-422e-bb66-b379d2e6c83f中印有“CIVILIZATION ARCHIVE”字样的银色金属外壳移动硬盘。\n\n场景：@2f249ccf-d4b0-46ee-ae02-26d673c45956中的废墟城市，极浅景深下完全虚化，环境持续有轻微风声和电流滋滋声。\n\n风格：超特写微距，浅景深，冷调低饱和，末世废土氛围，带蓝色科技光效，画面质感粗糙。\n\n音乐：缓慢无明确节拍的氛围音乐，以深沉持续的合成器低音铺底，营造悬疑广阔略带忧郁的氛围。\n\n情节： 中景变近景特写，主人公坐在废墟中，右手撑地时感受到掌下异物，低头查看，半埋在灰尘中的硬盘显露。主人公右手拾起硬盘，镜头聚焦特写，他用左手拇指擦去表面灰尘，磨损的金属外壳逐渐露出，“CIVILIZATION ARCHIVE”字样显现。 切换至第三人称中近景，主人公站立于废墟边缘，双手握着硬盘，神情从疑惑逐渐变为震惊。周围环境声音减弱只剩风声，主人公缓缓将拇指移到硬盘侧面的启动按钮，短暂停顿后坚定按下。低沉电子启动音响起，硬盘边缘蓝色指示灯瞬间亮起，蓝色能量光沿金属边缘快速扩散，一道明亮蓝色扫描光从左至右高速扫过整个硬盘表面，蓝光映亮主人公的脸庞，他震惊地注视着手中的硬盘。画面结束于扫描完成瞬间，准备衔接下一段全息系统启动。\n"
+      },
+      {
+        "cell": "P9",
+        "value": "固定镜头。\n\n废墟地面开始出现蓝色扫描光。\n\n无数蓝色粒子从地下升起。\n从无到有，先出现地基线框。\n\n蓝色的全息网格向上快速生长、扫描，塔楼逐层生成，最终形成完整的全息建筑影像，发光强度高，科技感。\n\n"
+      }
+    ],
+    [
+      {
+        "cell": "A10",
+        "value": "主人公"
+      },
+      {
+        "cell": "B10",
+        "value": "疲惫、麻木、不耐烦；坐姿微微前倾；右手拿黑色硬盘，另一只手机械地敲击键盘；眼睛有黑眼圈和屏幕蓝光反射。"
+      },
+      {
+        "cell": "D10",
+        "value": "疲惫表情瞬间变为紧张疑惑，。手指停在键盘上方，右手仍紧紧拿着黑色硬盘。他抬眼向斜上方警报声源出看，眼神从不耐烦变成困惑和紧张，但没有起身逃跑。"
+      },
+      {
+        "cell": "J10",
+        "value": "第一人称视角抽离后的第三人称镜头。\n\n镜头位于人物身后约3米处。\n\n镜头高度略高于肩膀。\n\n9:16竖构图。\n\n成年男性站立于废墟边缘。\n\n衣着与参考图一致，带有由于废墟的灰尘。\n\n背对镜头。\n\n身体保持静止。\n\n人物位于画面下部中央区域，占画面高度约20%。\n\n前方为毁灭后的未来城市。\n\n多栋摩天大楼坍塌倾斜。\n\n建筑钢结构裸露。\n\n部分建筑持续燃烧。\n\n浓烟覆盖天空。\n\n空气中漂浮灰烬颗粒。\n\n远处城市轮廓延伸至地平线。\n\n广角镜头。\n\n电影级写实风格。\n\n超高细节。\n\n真实光影。\n\n体积烟雾。"
+      },
+      {
+        "cell": "K10",
+        "value": "保持同一个末日废墟场景。\n\n保持同一个主人公。\n\n保持同一个城市布局。\n\n一镜到底。\n\n镜头开始于主人公第一人称视角。\n\n主人公保持静止，凝视远方废墟城市。\n\n镜头缓慢向后移动。\n\n仿佛从主人公眼睛位置逐渐脱离。\n\n运动平稳连续。\n\n不切换镜头。\n\n不瞬间跳转。\n\n随着镜头后退。\n\n镜头从主人公双眼位置缓慢向后穿出头部，从第一人称视角自然过渡到第三人称背影视角。\n\n主人公后脑逐渐进入画面。\n\n随后露出完整背影。\n\n确认刚才看到的一切都是主人公的视角。\n\n主人公始终保持静止。\n\n继续凝视远方。\n\n镜头持续向后运动。\n\n同时缓慢向斜上方升高。\n\n从近景逐渐变为中景。\n\n从中景逐渐变为远景。\n\n随着镜头不断后撤升高。\n\n越来越多城市区域进入画面。\n\n更多坍塌建筑逐渐显现。\n\n城市尺度不断扩大。\n\n主人公在画面中的比例持续缩小。\n\n镜头继续平稳后撤。\n\n继续升高。\n\n最终形成高空俯瞰视角。\n\n完整展现毁灭后的未来城市全貌。\n\n主人公仅作为画面底部的小型背影存在。\n\n全程保持电影级运镜。\n\n缓慢、庄重、连续。\n\n无人机式平滑运动。\n\n无突然加速。\n\n无抖动。\n\n无镜头切换。\n\n真实摄影机轨迹。\n\n电影级写实风格。\n\n如果想让“抽离身体”更明显\n\n可以在开头额外加一句：\n\n\n\n很多视频模型对这句话理解得不错，会更容易做出：\n\nPOV\n↓\n后脑勺出现\n↓\n背影出现\n\n而不是直接硬切到背影。\n\n这一句其实是整个镜头的灵魂。因为你的创意最特别的地方，不是升空，而是：\n\n观众突然发现，原来刚才看到的世界，是这个人的眼睛。\n\n语音聊天已结束\n10秒"
+      },
+      {
+        "cell": "L10",
+        "value": "第一人称视角凝视废墟城市。镜头从主人公双眼位置缓慢向后穿出头部，自然脱离身体。后脑逐渐进入画面，随后露出完整背影。平滑过渡到第三人称背影视角。一镜到底，无切镜头。"
+      },
+      {
+        "cell": "P10",
+        "value": "镜头快速拉近，穿过tum钟楼，镜头继续向上升空。\n\n不断拉高高度。\n\n俯瞰整片废墟城市。\n\n地面依旧残破不堪。\n\n浓烟弥漫。\n\n无数建筑遗址散布城市各处。\n\n世界仿佛已经死亡。\n\n电影级航拍。"
+      }
+    ],
+    [
+      {
+        "cell": "A11",
+        "value": "对手戏人物"
+      },
+      {
+        "cell": "B11",
+        "value": "不满、焦躁、有压迫感；站在主人公身后，身体前倾，指向上传进度条；只用肢体施压，不说话。"
+      },
+      {
+        "cell": "D11",
+        "value": "老板站在主人公身后，先沉默几秒，也抬头看向警告方向，表情从愤怒变成短暂震惊。随后他压住情绪，重新指向上传进度条，恢复冷酷、强硬、官僚化的表情。"
+      },
+      {
+        "cell": "J11",
+        "value": "高空俯视镜头。\n\n镜头位于城市上空约100米高度。\n\n镜头向下约30度俯拍。\n\n9:16竖构图。\n\n毁灭后的未来城市占据整个画面。\n\n大量摩天大楼坍塌。\n\n道路断裂。\n\n建筑残骸遍布城市。\n\n\n浓烟覆盖城市上空。\n\n人物位于画面下部区域特别小。\n\n背对镜头站立于废墟边缘。\n\n人物高度不超过画面高度的3%。\n\n超广角镜头。\n\n大尺度城市景观。"
+      },
+      {
+        "cell": "L11",
+        "value": "保持同一主人公与同一城市布局。镜头持续向后平稳移动，同时缓慢向斜上方升高。从中景逐渐变为远景。城市尺度不断扩大。越来越多毁灭后的建筑进入画面。主人公比例持续缩小。最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。电影级无人机运镜。"
+      },
+      {
+        "cell": "P11",
+        "value": "突然。\n\n一道巨大的蓝色扫描波从眼前向远方扩散。\n\n扫描波经过的区域开始出现建筑轮廓。\n\n无数建筑同时生长。\n\n蓝色全息线框从废墟中升起。\n\n街区被重新绘制。\n\n道路轮廓显现。\n\n桥梁生成。\n\n历史建筑重建。\n\n现代建筑重建。\n\n整个城市同时被构建。\n\n仿佛上帝正在重新绘制文明。"
+      }
+    ],
+    [
+      {
+        "cell": "A12",
+        "value": "背景"
+      },
+      {
+        "cell": "B12",
+        "value": "室内是冷色未来办公室，灰色办公桌，黑色网面椅，蓝色数据屏幕，全息建筑模型，文件和线缆；窗外城市完整平静，远处乌云慢慢聚集。"
+      },
+      {
+        "cell": "D12",
+        "value": "窗外城市，远处乌云加深，慢慢出现火光。"
+      },
+      {
+        "cell": "K12",
+        "value": "总结运镜：黑屏开始。没有画面。只听见强烈耳鸣、沉重呼吸、远处建筑坍塌的低沉轰鸣、金属结构扭曲摩擦声、呼啸风声与零星爆炸声。模拟真实人类从昏迷中逐渐苏醒。第一人称视角（POV），镜头就是主人公的眼睛。眼皮半睁半闭，黑色眼皮阴影遮挡大部分视野。第一次睁眼只睁开一半，画面短暂出现模糊光线，随后又无力闭合四分之一。停顿片刻后，眼皮缓慢重新睁开，视野逐渐变亮，画面模糊失焦，存在轻微重影，焦点不断漂移和调整。呼吸声近距离可闻，画面随着呼吸产生轻微起伏。最终焦点逐渐恢复，显现出仰躺在废墟中的天空视角：浓密黑烟覆盖天空，灰烬和火星缓慢飘落，几根扭曲断裂的钢筋从画面两侧伸向天空，破碎混凝土和建筑残骸位于视野边缘。整体感觉像刚从剧烈撞击后的昏迷中恢复意识，震惊、茫然、迟钝、难以置信。\n\n镜头保持第一人称视角，一镜到底，不切镜头。主人公开始艰难起身，仿佛用双手撑住地面。镜头先轻微左右晃动，再缓慢向前上方运动。动作迟缓、沉重、真实，像身体还没有完全恢复控制。视线逐渐脱离天空，原本画面中的钢筋、浓烟和灰烬向画面上方滑出。镜头高度持续升高，从仰躺视角自然过渡到半坐起视角，再进入坐姿视角。过程中保留轻微头晕感、呼吸晃动和不稳定重心，不要平滑得像机械镜头。随着视线抬高，画面前景逐渐出现碎裂柏油路、破碎混凝土、扭曲钢筋、散落玻璃、灰尘覆盖的破损车辆。中景出现坍塌高架桥、断裂建筑外墙、裸露钢结构和正在燃烧的建筑残骸。远处未来城市轮廓逐渐显现，越来越多倒塌倾斜的摩天大楼进入视野，建筑之间升起浓烟，橙红火光在烟雾中闪烁。镜头最终停在坐姿高度，主人公静止凝视前方，没有对白，没有大幅动作，只剩震惊和意识到灾难真实发生后的僵住感。\n\n保持同一个末日废墟场景、同一个主人公、同一个城市布局和连续时间。一镜到底。坐起后，镜头仍保持主人公第一人称视角，正对前方废墟城市。短暂停顿后，镜头开始非常缓慢地向后移动，仿佛从主人公双眼位置逐渐脱离。这个运动必须自然、连续、平稳，不能突然跳转，不能硬切。镜头从眼睛位置向后穿出头部，完成从第一人称视角到第三人称背影视角的自然过渡。随着镜头后退，主人公后脑逐渐进入画面，随后肩膀和完整背影逐渐显现。主人公背对镜头，身体静止，略微僵硬，仍然看向远处毁灭城市。这个瞬间要明确表达：刚才观众看到的一切都来自主人公的眼睛视角。禁止出现主人公正脸，禁止突然切到第三人称，禁止出现陌生人物替代主人公。\n\n镜头从主人公双眼位置缓慢向后穿出头部，从第一人称视角自然过渡到第三人称背影视角。主人公后脑逐渐进入画面。随后露出完整背影。运动路线是向后、向上、轻微俯视，像无人机从人物身后平稳拉远升空。从近景逐渐变为中景，人物从画面主体变成画面下方的背影；再从中景变为远景，人物比例持续缩小。随着镜头不断后撤升高，视野范围逐渐扩大，更多毁灭后的城市区域进入画面：坍塌高楼、断裂道路、破碎桥梁、燃烧街区、废弃车辆、建筑残骸、滚动浓烟和漂浮灰烬逐渐铺满画面。城市尺度不断扩大，废墟从局部街区扩展为整座未来城市。镜头继续平稳升高，最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。主人公只保留为画面下部很小的背影或黑色人影，站在废墟边缘不动。全程电影级写实风格，灾难电影质感，真实摄影机轨迹，缓慢、庄重、连续的长镜头运镜，体积烟雾，真实火光，灰暗天空，强烈尺度感，末日氛围，8K超清。无跳切、无突然加速、无明显抖动、无场景切换、无人物变形、无身份变化。\n\n"
+      }
+    ],
+    [
+      {
+        "cell": "A13",
+        "value": "光影"
+      },
+      {
+        "cell": "B13",
+        "value": "冷光灯和蓝色屏幕光为主，头顶硬光，冷峻高对比，灯光轻微闪烁，窗外有极弱的冷灰色风暴光。"
+      },
+      {
+        "cell": "D13",
+        "value": "冷白荧光灯和蓝色屏幕光为基础。红色警示灯开始旋转，红光一下一下扫过桌面、人物脸部和玻璃窗。光影从冷蓝办公感变成红蓝交替的紧急状态"
+      },
+      {
+        "cell": "K13",
+        "value": "黑屏开始。没有画面。只听见强烈耳鸣、沉重呼吸、远处建筑坍塌的低沉轰鸣、金属结构扭曲摩擦声、呼啸风声与零星爆炸声。模拟真实人类从昏迷中逐渐苏醒。第一人称视角（POV），摄影机即主人公的视线，观众通过主人公眼睛观察世界，不出现眼睛，不出现脸部。眼皮半睁半闭，黑色眼皮阴影遮挡大部分视野。第一次睁眼只睁开一半，画面短暂出现模糊光线，随后又无力闭合四分之一。停顿片刻后，眼皮缓慢重新睁开，视野逐渐变亮，画面模糊失焦，存在轻微重影，焦点不断漂移和调整。呼吸声近距离可闻，画面随着呼吸产生轻微起伏。最终焦点逐渐恢复，显现出仰躺在废墟中的天空视角：@3567eefd-2a05-4e7d-bbfb-7fcc1a854dcd浓密黑烟覆盖天空，灰烬和火星缓慢飘落，几根扭曲断裂的钢筋从画面两侧伸向天空，破碎混凝土和建筑残骸位于视野边缘。整体感觉像刚从剧烈撞击后的昏迷中恢复意识，震惊、茫然、迟钝、难以置信。\n\n镜头保持第一人称视角，一镜到底，不切镜头。主人公开始艰难起身，用双手撑住地面，右手下是数据硬盘。镜头先轻微左右晃动，再缓慢向前上方运动。动作迟缓、沉重、真实，像身体还没有完全恢复控制。视线逐渐脱离天空，原本画面中的钢筋、浓烟和灰烬向画面上方滑出。镜头高度持续升高，从仰躺视角自然过渡到半坐起视角，再进入坐姿视角@f2f10126-cd38-40e9-af87-e256db81b298。过程中保留轻微头晕感、呼吸晃动和不稳定重心，不要平滑得像机械镜头。随着视线抬高，画面前景逐渐出现碎裂柏油路、破碎混凝土、扭曲钢筋、散落玻璃、灰尘覆盖的破损车辆。中景出现坍塌高架桥、断裂建筑外墙、裸露钢结构和正在燃烧的建筑残骸。远处未来城市轮廓逐渐显现，越来越多倒塌倾斜的摩天大楼进入视野，建筑之间升起浓烟，橙红火光在烟雾中闪烁。镜头最终停在坐姿高度，主人公静止凝视前方，没有对白，没有大幅动作，只剩震惊和意识到灾难真实发生后的僵住感。\n\n保持同一个末日废墟场景、同一个主人公、同一个城市布局和连续时间。一镜到底。坐起后，镜头仍保持主人公第一人称视角，正对前方废墟城市。短暂停顿后，镜头开始非常缓慢地向后移动，仿佛从主人公双眼位置逐渐脱离。这个运动必须自然、连续、平稳，不能突然跳转，不能硬切。镜头从眼睛位置向后穿出头部，完成从第一人称视角到第三人称背影视角的自然过渡。随着镜头后退，主人公后脑逐渐进入画面，随后肩膀和完整背影逐渐显现。主人公背对镜头，身体静止，略微僵硬，仍然看向远处毁灭城市。@f2f10126-cd38-40e9-af87-e256db81b298这个瞬间要明确表达：刚才观众看到的一切都来自主人公的眼睛视角。禁止出现主人公正脸，禁止突然切到第三人称，禁止出现陌生人物替代主人公。\n\n镜头从主人公双眼位置缓慢向后穿出头部，从第一人称视角自然过渡到第三人称背影视角。主人公后脑逐渐进入画面。随后露出完整背影。@c92d274c-8416-46ff-b4db-76cfe8e17d63运动路线是向后、向上、轻微俯视，像无人机从人物身后平稳拉远升空。从近景逐渐变为中景，人物从画面主体变成画面下方的背影；再从中景变为远景，人物比例持续缩小。@d330ffae-5396-4e0d-99cc-8b4d34caaf0c随着镜头不断后撤升高，视野范围逐渐扩大，更多毁灭后的城市区域进入画面：坍塌高楼、断裂道路、破碎桥梁、燃烧街区、废弃车辆、建筑残骸、滚动浓烟和漂浮灰烬逐渐铺满画面。城市尺度不断扩大，废墟从局部街区扩展为整座未来城市。镜头继续平稳升高，最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。主人公只保留为画面下部很小的背影或黑色人影，站在废墟边缘不动。全程电影级写实风格，灾难电影质感，真实摄影机轨迹，缓慢、庄重、连续的长镜头运镜，体积烟雾，真实火光，灰暗天空，强烈尺度感，末日氛围，8K超清。无跳切、无突然加速、无明显抖动、无场景切换、无人物变形、无身份变化、不要提前切换视角。\n\n"
+      }
+    ],
+    [
+      {
+        "cell": "A14",
+        "value": "时间变化/剧情节拍"
+      },
+      {
+        "cell": "B14",
+        "value": "0-5秒：主人公重复扫描建筑数据，老板在身后无声施压，办公室平静压抑。5-6秒：窗外远处乌云加深，极轻微闪电反射在玻璃上，无人反应。6-7秒：主屏幕突然闪烁一次，红色警告边框刚开始出现但文字不可读，天花板警示灯只发出一次轻微咔哒声但不亮起。"
+      },
+      {
+        "cell": "D14",
+        "value": "0-2秒：红色警告界面弹出，警示灯开始旋转。2-4秒：广播声响起，老板和主人公疑惑听广播。4-6秒：主人公准备起身撤离，老板重新指向上传进度条，说出“先把数据上传，上传完再撤离”。"
+      }
+    ],
+    [
+      {
+        "cell": "A15",
+        "value": "结尾衔接"
+      },
+      {
+        "cell": "B15",
+        "value": "本镜在警报真正响起前一瞬间切断。下一镜才出现红色警示灯闪烁、警报声、撤离通知。但本镜不得出现完整警报、红灯闪烁、撤离、人群奔跑。"
+      }
+    ],
+    [
+      {
+        "cell": "A16",
+        "value": "环境音"
+      },
+      {
+        "cell": "B16",
+        "value": "持续音：冷光灯电流声、键盘声、扫描仪低鸣。突发音：最后一秒有一次轻微电流异常声和警示灯机械咔哒声。音量变化：最后半秒突然变安静后切断。"
+      },
+      {
+        "cell": "D16",
+        "value": "持续音：警报声、荧光灯电流声、屏幕故障声、扫描仪低鸣。突发音：红色警报启动声、广播系统接通声。音量变化：警报从突然刺耳开始，随后广播声音压过办公室环境声。"
+      }
+    ],
+    [
+      {
+        "cell": "A17",
+        "value": "对话"
+      },
+      {
+        "cell": "B17",
+        "value": "无对白。无字幕。无旁白。"
+      },
+      {
+        "cell": "D17",
+        "value": "广播声：“全球紧急通知。灭绝级撞击事件已确认。预计撞击时间：请所有人员尽快进行避难准备。” 老板停顿后说：“先把数据上传。上传完再撤离。” 禁止其他额外对白。"
+      }
+    ],
+    [
+      {
+        "cell": "A18",
+        "value": "风格与质感"
+      },
+      {
+        "cell": "B18",
+        "value": "数字电影，写实电影感，冷色调末世科幻前兆，冰冷金属质感，蓝色屏幕光，真实办公室材料。"
+      }
+    ],
+    [
+      {
+        "cell": "A19",
+        "value": "禁止项"
+      },
+      {
+        "cell": "B19",
+        "value": "对白，字幕，旁白，警报已经响起，红色警示灯已经闪烁，撤离已经开始，爆炸，火光，坠落碎片，建筑倒塌，城市毁灭，陨石可见，人群恐慌，换角度，换办公室，换人物，主人公手里没有硬盘。"
+      },
+      {
+        "cell": "D19",
+        "value": "明显爆炸严、重撞击灾难、陨石可见"
+      }
+    ],
+    [
+      {
+        "cell": "B22",
+        "value": "scene"
+      },
+      {
+        "cell": "F22",
+        "value": "Same futuristic architectural data office, same protagonist, same boss, same rotating blue holographic building models.\n\nRed emergency warning lights flash across the office while blue technological light illuminates the room. Alarm sirens become faster and more urgent.\n\nThe @Protagonist reaches his breaking point.\n\nHe suddenly jumps to his feet, sending his chair sliding backward. Nearby employees turn in shock.\n\nHe rushes toward the @boss, grabs him by the collar with both hands, and slams him onto the desk.\n\nDocuments, architectural drawings, and office supplies scatter across the floor.\n\nLeaning close to the boss, he furiously yells about spending every day scanning buildings, uploading files, and collecting useless architectural data. His anger gradually turns into despair.\n\nThe office falls silent except for alarms.\n\nThe protagonist grabs the @device and raises it high, preparing to smash it down.\n\nAt that exact moment, a massive red explosion erupts outside the floor-to-ceiling windows.\n\nA giant crimson fireball engulfs the city skyline.\n\nRed light floods the office, overpowering the blue holographic projections. The building models flicker and distort.\n\nA thunderous roar arrives.\n\nThe entire office shakes violently.\n\nPapers fly through the air.\n\nThe protagonist freezes with the hard drive still raised.\n\nThe expanding red blast fills the frame.\n\nExtreme overexposure.\n\nHard cut to black.\n\nCinematic photorealism, handheld camera, intense emotion, apocalypse atmosphere, realistic destruction, film quality.\n"
+      }
+    ],
+    [
+      {
+        "cell": "A23",
+        "value": "最终 Prompt"
+      },
+      {
+        "cell": "D23",
+        "value": "Keep the same futuristic architectural civilization data office, the same protagonist, the same boss, the same desk, the same set of blue architectural scanning screens, and the same city background outside the window. Continue directly from the abnormal screen flicker in the final second of the previous shot. Do not change the office, characters, clothing, or camera angle.\n\nMedium-wide shot, slightly low angle, stable camera. The camera follows the protagonist’s line of sight slightly upward, gradually pushing toward the boss and the red emergency warning light.\n\nThe protagonist’s exhausted expression instantly shifts into nervous confusion. His fingers freeze above the keyboard, while his right hand still grips the black hard drive tightly. He raises his eyes toward the alarm source above and to the side. His expression changes from impatience to confusion and tension, but he does not stand up or run away.\n\nThe boss stands behind the protagonist. At first, he stays silent for a few seconds and also looks upward toward the direction of the warning. His expression shifts from anger to brief shock. Then he suppresses his emotions, points back at the upload progress bar, and returns to a cold, forceful, bureaucratic expression.\n\nOutside the window, the city remains visible. Dark clouds in the distance grow deeper, and faint firelight slowly begins to appear far away.\n\nThe lighting is based on cold white fluorescent lights and blue screen glow. A red emergency warning light begins to rotate, sweeping pulses of red light across the desk, the characters’ faces, and the glass window. The visual mood shifts from cold blue office lighting into an urgent red-and-blue emergency atmosphere.\n\n0-2 seconds: A red warning interface pops up on the screen, and the emergency warning light begins rotating.\n2-4 seconds: The emergency broadcast begins. The boss and the protagonist listen in confusion.\n4-6 seconds: The protagonist prepares to stand up and evacuate, but the boss points back at the upload progress bar and says, “Upload the data first. Evacuate after the upload.”\n\nContinuous sounds: alarm siren, fluorescent electrical buzzing, screen glitch sounds, low scanner hum.\nSudden sounds: red alarm activation sound, broadcast system connection sound.\nVolume change: the alarm begins suddenly and harshly, then the broadcast voice rises above the office ambience.\n\nBroadcast voice:\n“Global emergency notice. Extinction-level impact event confirmed. All personnel prepare for evacuation immediately.”\n\nAfter a pause, the boss says:\n“Upload the data first. Evacuate after the upload.”\n\nNo extra dialogue.\n\nNegative prompt: obvious explosion, severe impact disaster, visible meteor, major destruction, falling debris, collapsed buildings, city destroyed, panic crowd, evacuation already completed, different office, different characters, different clothing, different camera angle, protagonist without hard drive, subtitles, narration, watermark, logo."
+      },
+      {
+        "cell": "F23",
+        "value": "Close-up on @Protagonist's right hand resting beside the keyboard.\n\nThe @boss turns back and going to leave.\n\nEmergency alarms grow faster and more urgent.\n\nHis fingers slowly curl inward.\n\nThe fist tightens.\n\nKnuckles turn white.\n\nVeins become visible beneath the skin.\n\nA slight tremor runs through his hand.\n\nYears of suppressed anger are about to erupt.\n\nBackground music steadily rises.\n\nLow-frequency tension builds.\n\nRed warning lights flash continuously.\n\nBlue holographic architecture continues rotating.\n\nCinematic photorealism.\n\nExtreme emotional tension."
+      },
+      {
+        "cell": "G23",
+        "value": "@Protagonist suddenly rises from his chair.\n\nThe chair rolls backward.\n\nThe camera follows with violent energy.\n\nHe charges toward the boss.\n\nGrabs the boss by the collar.\n\nForcefully slams him against the office desk.\n\nFolders and papers scatter everywhere.\n\nThe entire office falls silent.\n\nCoworkers stare in shock.\n\nRed emergency lights flash frantically.\n\nBlue holographic building models continue rotating overhead.\n\n@Protagonist shouts furiously:\n\n\"Scanning every day!\"\n\n\"Uploading every day!\"\n\n\"The world is ending!\"\n\n\"Nobody cares about any of this!\"\n\nBackground music surges toward its climax.\n\nAlarm frequency accelerates continuously.\n\nTension escalates without pause.\n\nCinematic handheld camera.\n\nExplosive emotional breakdown."
+      },
+      {
+        "cell": "P23",
+        "value": "@Protagonist releases the boss.\n\nHe grabs the black civilization data hard drive@device.\n\nRaises it high above his head.\n\nPreparing to smash it onto the desk.\n\nThe camera freezes on the moment before impact.\n\nInside the office,\n\nred emergency lights flash violently.\n\nTheir frequency reaches maximum intensity.\n\nThe blue holographic architectural models continue rotating.\n\nBut outside the windows,\n\nan intense red glow rapidly grows brighter.\n\nA massive red fireball erupts across the distant city.\n\nA devastating crimson shockwave spreads across the skyline.\n\nThe entire city becomes bathed in blood-red light.\n\nBuilding silhouettes begin disappearing into the explosion.\n\nThe blue technological glow inside the office is completely overwhelmed by red destruction.\n\nThe holographic building projections flicker and distort.\n\nAlarm sirens reach maximum intensity.\n\nBackground music hits its climax.\n\nA colossal roar consumes every sound.\n\nViolent shaking.\n\nInstant hard cut to black.\n\nAbsolute silence.\n\nCinematic apocalypse.\n\nPhotorealistic destruction.\n\nFilm-quality ending."
+      }
+    ],
+    [
+      {
+        "cell": "A24",
+        "value": "问题记录"
+      },
+      {
+        "cell": "D24",
+        "value": "镜头连续性（continuity）和时间节拍（timing beats）不严谨：\n\n1.本来是近景镜头，新片段又是远镜头推进近。（是我未考虑到尾帧镜头大小导致错误）\n2.主人公应在警报人声停了之后才准备起身，boss在人声警报声停了之后，主人公准备起身是开始说话，并慢慢转身准备离开。\n3.先产生短促多次的滴滴滴刺耳的鸣笛提示引起注意，再出现人声警报，人声消失后，鸣笛依旧存在。在boss开始说话时减弱逐渐减弱音量变为背景音。"
+      },
+      {
+        "cell": "F24",
+        "value": "二次迭代"
+      },
+      {
+        "cell": "G24",
+        "value": "二次迭代"
+      }
+    ],
+    [
+      {
+        "cell": "A25",
+        "value": "下一次修改目标"
+      },
+      {
+        "cell": "D25",
+        "value": "Maintain the same futuristic architectural civilization data office, the same protagonist, the same boss, the same desk, the same blue architectural scanning screens, the same rotating holographic building model, and the same city skyline outside the window. This shot begins immediately after the previous shot ends, continuing from the moment the red warning frame first appears on the monitor. Do not change the office, characters, costumes, desk layout, or scene continuity.\n\nCamera:\nStart from the same medium shot scale as the previous shot. Do NOT reset to a wider establishing shot. The camera remains stable and continuous. During the scene, the camera slowly pulls back from a medium shot into a wider full-office composition, gradually revealing more of the office environment, the red emergency lighting, and the growing threat outside the windows. Slight low-angle perspective.\n\nComposition:\nThe protagonist remains seated in the foreground at the same desk. The boss stands behind him in the same position. The main monitor and upload progress bar remain visible throughout the shot. The rotating holographic architectural model remains continuously visible and rotating for the entire duration of the scene.\n\nProtagonist:\nExhausted and emotionally drained at first. His fingers stop above the keyboard when the alarm begins. His right hand continues gripping the black hard drive tightly. He looks upward toward the source of the warning. His expression changes from annoyance to confusion, then tension. During the emergency broadcast he remains seated and listening. He does NOT attempt to stand up while the broadcast is speaking.\n\nBoss:\nStanding behind the protagonist. Initially angry and impatient. When the emergency alert begins he becomes briefly silent and looks toward the warning source. His expression shifts from irritation to temporary shock. During the broadcast he says nothing. Only after the broadcast voice completely finishes does he regain control of his emotions, return to a cold bureaucratic attitude, and point again toward the upload progress bar.\n\nBackground:\nCold futuristic office environment. Blue architectural scanning screens. Gray desk. Black mesh office chair. Office equipment, cables and documents remain unchanged. Outside the window, the city is still intact. Dark storm clouds continue gathering. A distant orange glow gradually appears and slowly grows brighter throughout the shot. The fire glow becomes noticeably larger by the end of the scene, but no visible explosion, impact event, meteor, or collapsing buildings are shown.\n\nLighting:\nCold white fluorescent office lighting and blue monitor light dominate at first. Red emergency warning lights activate and begin rotating. Red light repeatedly sweeps across the protagonist's face, the boss's face, the desk, the hard drive, the rotating holographic building model, and the office windows. The atmosphere gradually shifts from cold blue office lighting to alternating blue-red emergency lighting.\n\nStory Timing:\n\n0–1.5 seconds:\nSeveral short, sharp electronic warning beeps suddenly begin.\n“Beep. Beep. Beep. Beep.”\nThe office lights flicker.\nThe red warning interface appears.\nThe red emergency light starts rotating.\n\n1.5–4.5 seconds:\nThe emergency broadcast activates.\nBoth the protagonist and the boss remain silent and listen.\nNeither character attempts to move or leave.\nThe holographic building model continues rotating normally.\n\nBroadcast Voice:\n\"Global emergency notice.\"\n\"Extinction-level impact event confirmed.\"\n\"All personnel must prepare for evacuation immediately.\"\n\n4.5–5 seconds:\nThe broadcast voice ends completely.\nA brief moment of silence follows except for the continuing warning beeps.\n\n5–7 seconds:\nThe protagonist finally begins preparing to stand up and leave.\nHis shoulders move first.\nHis chair shifts slightly.\nHe begins turning away from the desk.\n\nAt this exact moment the boss suddenly points toward the upload progress bar and interrupts him.\n\nBoss:\n\"Upload the data first.\"\n\"Evacuate after the upload is complete.\"\n\n7–9 seconds:\nThe protagonist slowly turns his head back toward the boss.\nThe warning beeps continue but gradually decrease in volume, becoming background sound underneath the boss's voice.\nThe upload progress bar remains almost motionless.\nThe distant fire glow outside the window becomes larger and brighter.\n\nSound Design:\n\nContinuous sounds:\nFluorescent electrical hum.\nScanner low-frequency hum.\nComputer system noise.\nRotating holographic projection hum.\n\nAlert sounds:\nMultiple short sharp warning beeps first.\nEmergency broadcast second.\nWarning beeps continue after the broadcast ends.\n\nAudio mix:\nThe beeps are initially loud and attention-grabbing.\nThe broadcast voice temporarily becomes the dominant sound.\nAfter the broadcast ends, the beeps remain active.\nWhen the boss begins speaking, the warning beeps gradually reduce in volume and become background ambience.\n\nDialogue:\n\nBroadcast:\n\"Global emergency notice.\"\n\"Extinction-level impact event confirmed.\"\n\"All personnel must prepare for evacuation immediately.\"\n\nBoss:\n\"Upload the data first.\"\n\"Evacuate after the upload.\"\n\nNo other dialogue.\n\nRestrictions:\nNo visible meteor.\nNo explosion.\nNo impact event shown.\nNo collapsing buildings.\nNo falling debris.\nNo city destruction.\nNo evacuation crowds.\nNo running people.\nNo additional dialogue.\nNo subtitles.\nNo narration.\nNo camera reset.\nNo office change.\nNo character change.\nNo costume change.\nThe protagonist must keep holding the black hard drive throughout the scene.\nThe holographic architectural model must continue rotating during the entire sequence.\n"
+      },
+      {
+        "cell": "E25",
+        "value": "Keep the same futuristic architectural civilization data office, the same protagonist, the same boss, the same desk, the same blue architectural scanning screens, the same rotating blue holographic architectural model, and the same city background outside the window. Continue directly from the abnormal screen flicker in the final second of the previous shot. Do not change the office, characters, clothing, or camera direction.\n\nStart from a medium shot, matching the previous ending frame as closely as possible. The camera does not push in. Instead, it slowly pulls back from the protagonist into a wider office view, gradually revealing more of the desk, the boss behind him, the red warning lights, and the large window in the background.\n\nThe protagonist sits at the desk, exhausted and tense, still gripping a black hard drive tightly in his right hand. His fingers freeze above the keyboard. The blue holographic architectural model above the desk continues rotating steadily, even as the warning begins.\n\n0-1 seconds:\nSeveral short, sharp warning beeps suddenly burst through the office: beep, beep, beep. The red warning interface flashes onto the main monitor. Cold fluorescent lights flicker, and the red emergency light begins rotating.\n\n1-3 seconds:\nThe emergency broadcast voice begins. The protagonist and the boss both look upward toward the alarm source with confusion and tension. The protagonist remains seated and does not move to evacuate yet. The boss is silent, briefly shocked.\n\nBroadcast voice:\n“Global emergency notice. Extinction-level impact event confirmed. All personnel prepare for evacuation immediately.”\n\n3-4 seconds:\nThe broadcast voice ends. The sharp warning beeps continue in the background. The protagonist finally reacts, loosens his posture, and begins preparing to stand up from the chair while still holding the black hard drive.\n\n4-6 seconds:\nAs the protagonist starts to rise and slowly turns his body as if preparing to leave, the boss suppresses his shock and points sharply back at the upload progress bar. The alarm beeps gradually lower in volume and become background sound while the boss speaks.\n\nBoss says:\n“Upload the data first. Evacuate after the upload.”\n\nThe boss’s expression returns to cold, forceful, bureaucratic seriousness. The protagonist freezes halfway through standing, caught between evacuation and obedience.\n\nOutside the floor-to-ceiling window, the city skyline remains intact. Dark storm clouds grow heavier in the distance. A faint orange firelight appears far away and gradually becomes slightly larger and brighter, but there is still no visible meteor, no impact, no explosion, no falling debris, and no destroyed buildings.\n\nLighting:\nCold white fluorescent office lights and blue screen glow remain the base lighting. The red emergency light rotates across the desk, the protagonist’s face, the boss’s suit, the holographic building model, and the glass window. The atmosphere shifts from cold blue office routine into urgent red-and-blue emergency tension.\n\nAudio:\nShort sharp warning beeps first. Then emergency broadcast voice. After the broadcast ends, the beeps continue. When the boss begins speaking, the beeps gradually decrease in volume and become background ambience. Also include fluorescent electrical buzzing, monitor glitch sounds, and low scanner hum.\n\nVisual style:\nPhotorealistic live-action disaster film realism, realistic cinematic lighting, natural human faces, realistic skin texture, real office materials, cold bureaucratic sci-fi atmosphere, calm before catastrophe.\n\nNegative prompt:\ncamera push-in, starting from a wide shot, changing to a close-up, different office, different characters, different clothing, different camera direction, protagonist running away immediately, protagonist standing before the broadcast ends, boss speaking during the broadcast, holographic building model stopping, hologram disappearing, visible meteor, obvious explosion, severe impact disaster, falling debris, collapsed buildings, destroyed city, panic crowd, evacuation already completed, extra dialogue, subtitles, narration, watermark, logo, anime, cartoon, 3D animation, illustration."
+      },
+      {
+        "cell": "F25",
+        "value": "\n办公室被红色紧急警报灯和蓝色科技光交替照亮，警报声越来越急促。\n\n镜头特写主人公自然下垂的右手。\n\n手指缓缓收紧。\n\n拳头越来越紧。\n\n指节发白。\n\n青筋浮现。\n\n压抑已久的愤怒即将失控。\n\n主人公猛地向前冲向正要离开的老板\n\n主人公突然猛地站起。\n\n办公椅向后滑开。\n\n镜头跟随快速推进。\n\n主人公挥出一记充满愤怒的重拳，狠狠砸向老板头部。\n\n拳头击中的瞬间，画面剧烈震动。\n\n电影级写实风格，强烈情绪张力，手持镜头，红蓝灯光交织，紧张压迫感。\n\n镜头跟随快速推进。\n\n主人公挥出一记充满愤怒的重拳，狠狠砸向老板头部。\n"
+      },
+      {
+        "cell": "G25",
+        "value": "主人公冲上前，一把抓住老板衣领，将他狠狠按在办公桌上。\n\n办公桌剧烈震动。\n\n文件、图纸、文件夹和办公用品散落一地。\n\n红色警报灯疯狂闪烁。\n\n蓝色全息建筑模型仍在旋转。\n\n主人公贴近老板，情绪彻底崩溃，愤怒咆哮：\n\n“天天扫描！”\n\n“天天上传！”\n\n“天天让我采这些破建筑！”\n\n“你告诉我有什么用！”\n\n“世界都要毁灭了！”\n\n“谁还在乎这些东西！”\n\n他的情绪从愤怒逐渐变成绝望。\n\n背景音乐持续升高。\n\n警报声频率越来越快。\n\n电影级超写实风格，强烈戏剧冲突，末日氛围，红色警报灯与蓝色科技光交织。"
+      }
+    ],
+    [
+      {
+        "cell": "F26",
+        "value": "The office is illuminated by alternating red emergency warning lights and blue technological glow. Alarm sirens become increasingly urgent.\n\nClose-up on the protagonist's right hand hanging naturally beside the desk.\n\nHis fingers slowly curl inward.\n\nThe fist tightens.\n\nKnuckles turn white.\n\nVeins emerge beneath the skin.\n\nYears of suppressed anger are on the verge of exploding.\n\nThe boss is about to walk away.\n\nSuddenly, the protagonist lunges forward toward him.\n\nThe camera rapidly pushes forward, following his movement.\n\nFueled by pure rage, the protagonist charges after the boss and throws a powerful punch directly at his head.\n\nThe moment the punch lands, the entire frame shakes violently from the impact.\n\nCinematic photorealism, intense emotional tension, handheld camera movement, dramatic red and blue lighting, escalating pressure, realistic action, film-quality visuals.\n"
+      },
+      {
+        "cell": "G26",
+        "value": "The protagonist rushes forward, grabs the boss by the collar, and violently slams him onto the office desk.\n\nThe desk shakes from the impact.\n\nDocuments, architectural drawings, folders, and office supplies scatter across the floor.\n\nRed emergency warning lights flash frantically throughout the office.\n\nBlue holographic architectural models continue rotating overhead.\n\nLeaning close to the boss, the protagonist completely loses control and shouts in rage:\n\n\"Scanning every day!\"\n\n\"Uploading every day!\"\n\n\"What is any of this even for?!\"\n\n\"The world is ending!\"\n\n\"Who still cares about the data?!\"\n\nHis emotions gradually shift from pure anger to despair.\n\nThe background music continues building toward a climax.\n\nThe alarm sirens become faster and more urgent.\n\nCinematic photorealism, intense dramatic confrontation, emotional breakdown, apocalyptic atmosphere, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, film-quality visuals.\n"
+      }
+    ],
+    [
+      {
+        "cell": "A27",
+        "value": "问题2"
+      },
+      {
+        "cell": "D27",
+        "value": "位置关系改变了"
+      }
+    ],
+    [
+      {
+        "cell": "G28",
+        "value": "图片生成prompt"
+      }
+    ],
+    [
+      {
+        "cell": "D29",
+        "value": "chat-davinci"
+      },
+      {
+        "cell": "E29",
+        "value": "codex-davinci"
+      },
+      {
+        "cell": "G29",
+        "value": "boss形象与参考图中站立的微胖男性一致，微胖。主人公眉头紧锁形成褶皱，双眼瞪大露出虹膜边缘，眼神愤怒地的盯着boss。脸部充血发红，额头青筋暴起。咬肌紧绷下颌突出，嘴角扭曲成怒吼状。室内闪烁红色警报灯与冷色调科技蓝光相混合。窗外是红色火花与逐渐坍塌的建筑。"
+      }
+    ],
+    [
+      {
+        "cell": "D30",
+        "value": "Suddenly the cold fluorescent lights in @ArchitectureDataOffice begin to flicker violently, the entire office pulsing between icy blue darkness and harsh white light. A piercing emergency alarm cuts through the mechanical keyboard sounds. Red warning lights start rotating across the ceiling, sweeping sharp red beams over @Character's tired face, the holographic architectural models, and the frozen office workers. "
+      },
+      {
+        "cell": "E30",
+        "value": "#1\nSudden power dip in the same @ArchitectureDataOffice. Cold fluorescent lights flicker violently above @Character's desk, blue architectural scan monitors glitch, and a red emergency warning frame flashes across the main screen. @Character freezes, still holding a black hard drive in his right hand.\n\n"
+      },
+      {
+        "cell": "G30",
+        "value": "三次迭代"
+      }
+    ],
+    [
+      {
+        "cell": "G31",
+        "value": "The desk shakes from the impact. Documents, architectural drawings, folders, and office supplies scatter across the floor.\n\nRed emergency warning lights flash frantically throughout the office while blue holographic architectural models continue rotating overhead.\n\nLeaning close to the boss, the protagonist completely loses control and shouts in rage:\n\n\"Scanning every day!\"\n\n\"Uploading every day!\"\n\n\"What is any of this even for?!\"\n\n\"The world is ending!\"\n\n\"Who still cares about the data?!\"\n\nHis anger gradually turns into despair.\n\nOutside the floor-to-ceiling windows, distant fires grow larger with every second. The red glow intensifies, spreading across the city skyline and slowly overpowering the blue technological light inside the office.\n\nAlarm sirens become faster and more urgent. Background music rises toward a climax.\n\nCinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals."
+      }
+    ],
+    [
+      {
+        "cell": "D32",
+        "value": "Close-up on @Character's monitor as a red emergency alert window flashes open over the blue building scan interface, the upload progress bar still barely moving beneath it. The holographic building model continues rotating slowly, indifferent and mechanical."
+      },
+      {
+        "cell": "E32",
+        "value": "#2\nRotating red alarm light begins sweeping across the office desks, holographic building models, and @Character's tired face. The emergency broadcast plays over the speakers. @CharacterBoss stands behind him, silent for a beat, staring at the alert screen under alternating red and blue light."
+      }
+    ],
+    [
+      {
+        "cell": "D34",
+        "value": "The office broadcast system crackles to life with a cold synthetic voice: \"Global emergency notice.\" The camera slowly pushes in on @Character as the red light reflects in their exhausted eyes. The voice continues: \"Extinction-level impact event confirmed.\" The alarm grows louder, red light spinning faster across the desk, hard drive @Device, keyboard, and holographic data projections."
+      },
+      {
+        "cell": "E34",
+        "value": "#3\n@CharacterBoss slowly turns away from the emergency alert and points sharply back at the upload progress bar on @Character's monitor. @Character remains seated, stunned, hard drive in hand. The city outside the floor-to-ceiling windows remains intact, with only dark storm clouds and faint distant lightning. No explosion, no debris, no evacuation yet."
+      }
+    ],
+    [
+      {
+        "cell": "D36",
+        "value": "Cut to @CharacterBoss standing behind @Character, suddenly silent, his stern expression frozen for a few seconds. The office workers in the background stop typing and look up in fear, but no one speaks. The broadcast continues: \"Estimated impact time: ten minutes.\" \"All personnel must immediately prepare for evacuation.\""
+      }
+    ],
+    [
+      {
+        "cell": "D38",
+        "value": "A tense pause. The camera holds on @CharacterBoss's face as the red emergency light passes over him again and again. He slowly lowers his eyes toward the unfinished upload bar on @Character's screen."
+      }
+    ],
+    [
+      {
+        "cell": "D40",
+        "value": "Then @CharacterBoss speaks coldly, almost without emotion: \"Upload the data first.\" A close-up on @Character's face, silent, exhausted, disbelief slowly turning into contained rage. @CharacterBoss adds: \"Evacuate after the upload is complete.\""
+      }
+    ],
+    [
+      {
+        "cell": "D42",
+        "value": "The alarm continues screaming. The upload progress bar remains almost motionless. Red light flashes across @Character's pale face, the hard drive @Device in their hand, and the blue holographic architectural model still rotating as if nothing has changed."
+      }
+    ]
+  ],
+  "final_input_output_videos": [
+    [
+      {
+        "cell": "B1",
+        "value": "s1"
+      },
+      {
+        "cell": "F1",
+        "value": "s2"
+      },
+      {
+        "cell": "J1",
+        "value": "s3"
+      },
+      {
+        "cell": "M1",
+        "value": "s4"
+      }
+    ],
+    [
+      {
+        "cell": "A2",
+        "value": "scene_prompt"
+      },
+      {
+        "cell": "B2",
+        "value": "Scene 1, 0-7 seconds. Vertical 9:16 photorealistic live-action film still style.\n\nInside a futuristic architectural data office, cold fluorescent lights flicker softly overhead. @Protagonist sits hunched at a desk, tired and bored, scanning blue holographic 3D architectural models and uploading civilization data to a database. Multiple monitors show blue architectural schematics, upload progress bars, and data panels.\n\nThe camera begins in a medium-wide shot from a slightly high angle, then slowly pushes in toward @Protagonist. Blue holographic light reflects in their tired eyes. Their typing is mechanical and repetitive. @Boss stands behind them, impatient and dissatisfied, leaning forward and watching the upload screen, but no emergency has started yet.\n\nThrough the large floor-to-ceiling windows in the background, the city skyline is calm and intact. Dark gray storm clouds slowly gather above the skyscrapers. A very faint distant lightning flash reflects on the window for a moment, subtle enough that nobody reacts.\n\nAt the end of the shot, the fluorescent lights flicker once, the holographic model stutters for a split second. At the final beat of the shot, the blue office monitors suddenly flicker violently for less than a second. A red warning frame begins to appear at the edge of the main screen, incomplete and unreadable. The ceiling alarm lights click once but do not illuminate yet. The office falls into a tense half-second of silence. @Protagonist barely notices and keeps typing. Cut immediately before the alarm starts and before any red emergency light appears.\n\nMood: bureaucratic pressure, meaningless routine, quiet unease, calm before catastrophe.\n\nLighting: cold fluorescent office lighting, blue monitor and hologram glow, subtle cool-gray storm light from the window.\n\nNegative prompt: alarm already sounding, red emergency lights, evacuation, explosion, fireball, burning buildings, falling debris, collapsing buildings, meteor visible, destroyed city, panic crowd, people running, bright orange glow, disaster already happening, anime, cartoon, illustration, unrealistic faces, plastic skin, watermark, logo.alarm already sounding, red warning lights already flashing, readable emergency alert, evacuation already happening\n\n"
+      },
+      {
+        "cell": "F2",
+        "value": "Same futuristic architectural data office, same protagonist, same boss, same rotating blue holographic building models.\n\nRed emergency warning lights flash across the office while blue technological light illuminates the room. Alarm sirens become faster and more urgent.\n\nThe @Protagonist reaches his breaking point.\n\nHe suddenly jumps to his feet, sending his chair sliding backward. Nearby employees turn in shock.\n\nHe rushes toward the @boss, grabs him by the collar with both hands, and slams him onto the desk.\n\nDocuments, architectural drawings, and office supplies scatter across the floor.\n\nLeaning close to the boss, he furiously yells about spending every day scanning buildings, uploading files, and collecting useless architectural data. His anger gradually turns into despair.\n\nThe office falls silent except for alarms.\n\nThe protagonist grabs the @device and raises it high, preparing to smash it down.\n\nAt that exact moment, a massive red explosion erupts outside the floor-to-ceiling windows.\n\nA giant crimson fireball engulfs the city skyline.\n\nRed light floods the office, overpowering the blue holographic projections. The building models flicker and distort.\n\nA thunderous roar arrives.\n\nThe entire office shakes violently.\n\nPapers fly through the air.\n\nThe protagonist freezes with the hard drive still raised.\n\nThe expanding red blast fills the frame.\n\nExtreme overexposure.\n\nHard cut to black.\n\nCinematic photorealism, handheld camera, intense emotion, apocalypse atmosphere, realistic destruction, film quality.\n"
+      }
+    ],
+    [
+      {
+        "cell": "B3",
+        "value": "s1-1"
+      },
+      {
+        "cell": "C3",
+        "value": "s1-2"
+      },
+      {
+        "cell": "D3",
+        "value": "s1-3"
+      },
+      {
+        "cell": "F3",
+        "value": "s2-1 "
+      },
+      {
+        "cell": "G3",
+        "value": "s2-2"
+      },
+      {
+        "cell": "H3",
+        "value": "s2-3"
+      },
+      {
+        "cell": "J3",
+        "value": "s3-1"
+      },
+      {
+        "cell": "K3",
+        "value": "s3-2"
+      },
+      {
+        "cell": "M3",
+        "value": "s4"
+      }
+    ],
+    [
+      {
+        "cell": "A4",
+        "value": "video create tool"
+      },
+      {
+        "cell": "B4",
+        "value": "wedavinci"
+      },
+      {
+        "cell": "C4",
+        "value": "wedavinci"
+      },
+      {
+        "cell": "D4",
+        "value": "wedavinci"
+      },
+      {
+        "cell": "F4",
+        "value": "wedavinci"
+      },
+      {
+        "cell": "G4",
+        "value": "PixVerse.ai"
+      },
+      {
+        "cell": "H4",
+        "value": "wedavinci"
+      },
+      {
+        "cell": "J4",
+        "value": "seedance"
+      },
+      {
+        "cell": "K4",
+        "value": "PixVerse.ai"
+      },
+      {
+        "cell": "M4",
+        "value": "seedance"
+      }
+    ],
+    [
+      {
+        "cell": "A5",
+        "value": "prompt"
+      },
+      {
+        "cell": "B5",
+        "value": "Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently"
+      },
+      {
+        "cell": "C5",
+        "value": "[Shot]\nType: Overhead wide shot of the office, slowly pushing in toward the protagonist\nMovement: Push-in (slow)\nSpeed: Normal\nFocal length: 50mm standard lens\n\n[Lighting]\nKey light: Cool fluorescent office lights (ceiling lights)\nLight position: Overhead (evenly distributed)\nLight quality: Hard light (cool color tone)\nLighting effect: High contrast (cold blue tone)\nDynamic lighting: Fluorescent lights buzzing softly (slight flickering)\n\n[Blocking and Composition]\nComposition type: Oppressive front-low / back-high positioning\nSpatial relationship: Close distance (standing behind, about 50 cm away), rear angle (the boss is behind the protagonist), top-down height difference (the boss is standing, the protagonist is sitting)\nVisual focus: Protagonist centered, boss in the background\n\n[Protagonist]@Protagonist\nExpression: Tired, impatient\nAction: Working with head lowered, fingers tapping on the keyboard\nBody posture: Sitting, leaning forward (staring at the screen)\nHand details: Right hand holding a hard drive @Device, left hand mechanically typing (with a hollow, numb feeling), fingers stiff.\nFacial muscle details: Drooping eyelids, corners of the mouth slightly turned downward\n\n[Supporting / Opposing Character]@Boss\nExpression: Stern, frowning\nAction: Standing behind the protagonist, looking down at the protagonist’s screen\nBody posture: Standing, pointing at the protagonist while scolding with the right hand\nHand details: Right hand pointing angrily at the holographic projection on the desk\n\n[Character Relationship]\nDistance: Close (standing behind, about 50 cm away)\nAngle: Rear angle (the boss is behind the protagonist)\nHeight difference: Looking down (the boss is standing, the protagonist is sitting)\n\n[Skin Texture and Appearance Details]\nSkin texture: Slight dark circles under the eyes (showing fatigue), visible pores\nSkin tone: Pale (from long-term indoor work)\nPhysiological reaction: None\nAppearance details: The data collector’s uniform is neat, but slightly worn-out\n\n[Background]@ArchitechtureOffice\nInterior: Office, blue architectural scanning interface, rotating holographic model, an upload progress bar moving so slowly it feels suffocating\nOutside the window: Ruined city (not shown in the first scene, to preserve suspense)\nDynamic elements: Holographic model rotating (slowly), upload progress bar (almost motionless)\n\n[Ambient Sound]\nContinuous sound: Keyboard typing (mechanical, hollow, background sound)\nVolume change: Keyboard typing (soft) → alarm sound (gradually increasing)\n\n[Dialogue]\nBoss: “Why is this so slow?!”\n\nBoss: “The latest data must be uploaded today.”\nProtagonist: (Does not argue, continues scanning the architectural model)\nBoss: “We’re running out of time.” (angrily accusing)\nProtagonist: (Silent, with clear impatience already showing on his face)\n\n[Ending Transition]\nA red warning pop-up suddenly appears on the computer screen, and the red light reflects onto the protagonist’s face.\n\n[Style and Texture Parameters]\nMedium: 35mm film photography\nArt style anchor: Post-apocalyptic sci-fi atmosphere, cool color palette\nSensory texture description: Harsh, husky light; cold metallic texture\n\nNegative words:No obvious disasters, such as explosions or similar large-scale destruction.\n\n @Protagonist @Device \n"
+      },
+      {
+        "cell": "D5",
+        "value": "0-1 seconds:\nSeveral short, sharp warning beeps suddenly ring out across the office: beep, beep, beep. A red warning interface flashes onto the main monitor. The cold white fluorescent lights begin to flicker, and the red emergency warning light starts rotating.\n\n1-3 seconds:\nThe emergency broadcast voice begins. The protagonist and the boss both raise their heads, looking toward the alarm source with confusion and tension. The protagonist remains seated and has not yet prepared to evacuate. The boss stays silent, briefly shocked.\n\nBroadcast voice:\n“Global emergency notice. Extinction-level impact event confirmed. All personnel prepare for evacuation immediately.”\n\n3-4 seconds:\nThe broadcast voice ends. The sharp warning beeps continue in the background. The protagonist finally reacts; his posture loosens for a moment, then suddenly tightens. He begins preparing to stand up from the chair while still holding the black hard drive.\n\n4-6 seconds:\nAs the protagonist begins to rise and slowly turns as if preparing to leave, the boss suppresses his shock and sharply points back at the upload progress bar. The warning beeps gradually decrease in volume and become background sound while the boss begins to speak.\n\nBoss says:\n“Upload the data first. Evacuate after the upload.”\n\nThe boss’s expression becomes cold, forceful, and bureaucratic again. The protagonist freezes halfway through standing, caught between the instinct to evacuate and the pressure to obey.\n\nVertical 9:16 aspect ratio."
+      },
+      {
+        "cell": "F5",
+        "value": "3 second：His fingers slowly curl inward.\n\nThe fist tightens.\n\nKnuckles turn white.\n\nVeins become visible beneath the skin.\n\nA slight tremor runs through his hand. with professional cinematography and dramatic lighting"
+      },
+      {
+        "cell": "G5",
+        "value": "Based on the final frame of the previous video:"
+      },
+      {
+        "cell": "H5",
+        "value": "in the same @Officefull  @Protagonist rushes forward, grabs the @Boss by the collar, and violently slams him onto the office desk.\n\nThe desk shakes from the impact. Documents, architectural drawings, folders, and office supplies scatter across the floor.\n\nRed emergency warning lights flash frantically throughout the office while blue holographic architectural models continue rotating overhead.\n\nLeaning close to the boss, the protagonist completely loses control and shouts in rage:\n\n\"Scanning every day!\"\n\n\"Uploading every day!\"\n\n\"What is any of this even for?!\"\n\n\"The world is ending!\"\n\n\"Who still cares about the data?!\"\n\nHis anger gradually turns into despair.\n\nOutside the floor-to-ceiling windows, distant fires grow larger with every second. The red glow intensifies, spreading across the city skyline and slowly overpowering the blue technological light inside the office.\n\nAlarm sirens become faster and more urgent. Background music rises toward a climax.\n\nCinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals.\n"
+      },
+      {
+        "cell": "J5",
+        "value": "黑屏开始。强烈耳鸣、沉重呼吸、远处建筑坍塌声与金属摩擦声。第一人称视角。眼皮半睁半闭，黑色眼皮阴影遮挡视野。第一次睁眼仅睁开一半又无力闭合，随后缓慢重新睁开。画面逐渐显现，模糊失焦，轻微重影，焦点不断恢复。最终聚焦到废墟中的天空视角。一镜到底，真实人类昏迷后苏醒效果。\n镜头1\n第一人称视角保持不变。主人公用双手撑住地面缓慢起身，镜头从仰躺视角逐渐抬升至坐姿视角。视线从天空转向前方废墟。越来越多毁灭后的城市进入视野。真实人体运动轨迹，轻微晃动与呼吸感，一镜到底。\n镜头2\n第一人称视角凝视废墟城市。镜头从主人公双眼位置缓慢向后穿出头部，自然脱离身体。后脑逐渐进入画面，随后露出完整背影。平滑过渡到第三人称背影视角。一镜到底，无切镜头。\n镜头3\n保持同一主人公与同一城市布局。镜头持续向后平稳移动，同时缓慢向斜上方升高。从中景逐渐变为远景。城市尺度不断扩大。越来越多毁灭后的建筑进入画面。主人公比例持续缩小。最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。电影级无人机运镜。\n镜头4\n"
+      },
+      {
+        "cell": "K5",
+        "value": "Main subjects:"
+      },
+      {
+        "cell": "M5",
+        "value": "固定镜头。 世界末日后的废墟。 教堂已经坍塌。 地面布满碎石和残骸。 浓烟缓慢飘动。 空气中漂浮灰尘。 远处偶尔有火光。 超写实。 电影级灾难场景。\n镜头1\n固定镜头。 废墟地面开始出现蓝色扫描光。 无数蓝色粒子从地下升起。 从无到有，光影迅速构建出建筑的轮廓线条，并按顺时针快转动。蓝色的全息网格向上快速生长、扫描，最终形成完整的全息建筑影像，发光强度高，科技感。 \n镜头2\n镜头3\n镜头快速拉近 穿过末日城市。 两侧是倒塌建筑。 浓烟弥漫。 街道被废墟覆盖。 镜头从楼宇之间高速穿梭。 飞快向前推进 来到图二Tum钟楼场景\n镜头4\n固定镜头。 废墟地面开始出现蓝色扫描光。 无数蓝色粒子从地下升起。 从无到有，先出现地基线框。 蓝色的全息网格向上快速生长、扫描，塔楼逐层生成，最终形成完整的全息建筑影像，发光强度高，科技感。 \n镜头5\n镜头6\n镜头快速拉近，从钟表窗户穿过钟楼，来到钟楼另一边。镜头向前向上升空。 不断拉高高度。 俯瞰整片废墟城市。 地面依旧残破不堪。 浓烟弥漫。 无数建筑遗址散布城市各处。 世界仿佛已经死亡。 电影级航拍。\n镜头7\n一道巨大的蓝色扫描波从眼前向远方扩散。 扫描波经过的区域开始出现建筑轮廓。 无数建筑同时生长。 蓝色全息线框从废墟中升起。 街区被重新绘制。 道路轮廓显现。 桥梁生成。 历史建筑重建。 现代建筑重建。 整个城市同时被构建。 仿佛正在重新绘制文明。\n镜头8\n镜头9"
+      }
+    ],
+    [
+      {
+        "cell": "A6",
+        "value": "methode"
+      },
+      {
+        "cell": "B6",
+        "value": "text to image to video in Wedavinci"
+      },
+      {
+        "cell": "C6",
+        "value": "text to image to video in Wedavinci"
+      },
+      {
+        "cell": "D6",
+        "value": "text to image to video in Wedavinci"
+      },
+      {
+        "cell": "F6",
+        "value": "image to video"
+      },
+      {
+        "cell": "G6",
+        "value": "4 seconds. The apocalypse begins: an explosion erupts, sending shockwaves and dust through the scene. Flames rush toward the camera, glass shatters, and the debris completely covers the entire frame."
+      },
+      {
+        "cell": "H6",
+        "value": "image to video"
+      },
+      {
+        "cell": "J6",
+        "value": "image to video"
+      },
+      {
+        "cell": "M6",
+        "value": "image to video"
+      }
+    ],
+    [
+      {
+        "cell": "A7",
+        "value": "image-reference"
+      },
+      {
+        "cell": "F7",
+        "value": "工作留痕\\S2S1_hands.png\""
+      },
+      {
+        "cell": "H7",
+        "value": "工作留痕\\S2S2_hit.png\""
+      },
+      {
+        "cell": "J7",
+        "value": "工作留痕\\image_referrence_for_seedance_s3-1\""
+      },
+      {
+        "cell": "K7",
+        "value": "A young white male wearing a gray-brown jacket."
+      },
+      {
+        "cell": "M7",
+        "value": "工作留痕\\image_referrence_for_seedance_s4\""
+      }
+    ],
+    [
+      {
+        "cell": "A8",
+        "value": "output_path"
+      },
+      {
+        "cell": "B8",
+        "value": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-1"
+      },
+      {
+        "cell": "C8",
+        "value": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-2\""
+      },
+      {
+        "cell": "D8",
+        "value": "工作留痕\\The_Blueprint\\scene-1-The_Weight_of_Meaningless_Work\\shot-3\""
+      },
+      {
+        "cell": "F8",
+        "value": "工作留痕\\The_Blueprint\\scene-4-Scene_2_hit\\shot-1\\variant-1-selected.mp4"
+      },
+      {
+        "cell": "H8",
+        "value": "工作留痕\\The_Blueprint\\scene-5-Scene_5\\shot-1\\variant-1-selected.mp4\""
+      },
+      {
+        "cell": "J8",
+        "value": "工作留痕\\shorts_need\\s3-1_wake.mp4\""
+      },
+      {
+        "cell": "K8",
+        "value": "A silver metallic external hard drive with the words “CIVILIZATION ARCHIVE” printed on it."
+      },
+      {
+        "cell": "M8",
+        "value": "工作留痕\\shorts_need\\s4 seedance_onecut.mp4"
+      }
+    ],
+    [
+      {
+        "cell": "K10",
+        "value": "Scene:"
+      }
+    ],
+    [
+      {
+        "cell": "K11",
+        "value": "A ruined city in the background, completely blurred with an extremely shallow depth of field. The environment is filled with a faint, continuous wind sound and subtle electrical buzzing."
+      }
+    ],
+    [
+      {
+        "cell": "K13",
+        "value": "Style:"
+      }
+    ],
+    [
+      {
+        "cell": "K14",
+        "value": "Extreme close-up / macro cinematography, shallow depth of field, cool-toned and low saturation, post-apocalyptic wasteland atmosphere, with blue technological light effects and a rough, gritty visual texture."
+      }
+    ],
+    [
+      {
+        "cell": "K16",
+        "value": "Music:"
+      }
+    ],
+    [
+      {
+        "cell": "K17",
+        "value": "Slow ambient music with no clear beat, built on deep, sustained synthesizer bass, creating a mysterious, vast, and slightly melancholic mood."
+      }
+    ],
+    [
+      {
+        "cell": "K19",
+        "value": "Action / Story:"
+      }
+    ],
+    [
+      {
+        "cell": "K20",
+        "value": "The shot moves from a medium shot into a close-up. The protagonist is sitting in the ruins. As he supports himself with his right hand on the ground, he feels an unusual object beneath his palm and looks down. A hard drive, half-buried in dust, is revealed."
+      }
+    ],
+    [
+      {
+        "cell": "K22",
+        "value": "He picks up the hard drive with his right hand. The camera shifts to a close-up as he wipes dust from its surface with his left thumb. The worn metallic shell gradually becomes visible, and the words “CIVILIZATION ARCHIVE” appear."
+      }
+    ],
+    [
+      {
+        "cell": "K24",
+        "value": "Cut to a third-person medium close shot. The protagonist stands at the edge of the ruins, holding the hard drive with both hands. His expression shifts from confusion to shock. The surrounding environmental sounds fade, leaving only the wind."
+      }
+    ],
+    [
+      {
+        "cell": "K26",
+        "value": "He slowly moves his thumb toward the power button on the side of the hard drive. After a brief pause, he presses it firmly."
+      }
+    ],
+    [
+      {
+        "cell": "K28",
+        "value": "A low electronic startup sound begins. Instantly, a blue indicator light along the edge of the hard drive turns on. Blue energy light rapidly spreads along the metal edges, and a bright blue scanning beam sweeps quickly across the entire surface of the hard drive from left to right. The blue glow illuminates the protagonist’s face as he stares at the device in shock."
+      }
+    ],
+    [
+      {
+        "cell": "K30",
+        "value": "The scene ends the moment the scan is completed, setting up the next sequence in which the holographic system activates."
+      }
+    ],
+    [
+      {
+        "cell": "K32",
+        "value": "This is Scene S3-2: Activating the Hard Drive."
+      }
+    ]
+  ]
+}
