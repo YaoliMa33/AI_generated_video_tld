@@ -26,13 +26,13 @@ const C = {
 };
 
 const img = {
-  office1: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png"),
-  office2: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png"),
-  alert: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png"),
-  fist: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/S2S1_hands.png"),
-  hit: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/S2S2_hit.png"),
-  ruins: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/image_referrence_for_seedance_s3-1/S3S1_all.png"),
-  rebuild: path.join(root, "data/input/source_package/视频提示词交付包/工作留痕/image_referrence_for_seedance_s4/9_munich_last.png"),
+  office1: path.join(root, "data/input/source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png"),
+  office2: path.join(root, "data/input/source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png"),
+  alert: path.join(root, "data/input/source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png"),
+  fist: path.join(root, "data/input/source_package/video_prompt_package/work_records/S2S1_hands.png"),
+  hit: path.join(root, "data/input/source_package/video_prompt_package/work_records/S2S2_hit.png"),
+  ruins: path.join(root, "data/input/source_package/video_prompt_package/work_records/seedance_s3_reference_images/S3S1_all.png"),
+  rebuild: path.join(root, "data/input/source_package/video_prompt_package/work_records/seedance_s4_reference_images/9_munich_last.png"),
 };
 
 async function writeBlob(filePath, blob) {

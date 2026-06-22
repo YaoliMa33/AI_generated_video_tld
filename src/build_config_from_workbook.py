@@ -32,15 +32,38 @@ def clean_ref(value: str) -> str:
     return value.strip().strip('"').strip()
 
 
+def normalize_workbook_reference(reference: str) -> Path:
+    normalized = reference.replace("\\", "/")
+    replacements = {
+        "工作留痕": "work_records",
+        "The_Blueprint": "the_last_data_assets",
+        "image_referrence_for_seedance_s3-1": "seedance_s3_reference_images",
+        "image_referrence_for_seedance_s4": "seedance_s4_reference_images",
+        "shorts_need": "selected_video_clips",
+        "s4 seedance_onecut.mp4": "s4_seedance_onecut.mp4",
+    }
+    for old, new in replacements.items():
+        normalized = normalized.replace(old, new)
+    return Path(normalized)
+
+
 def resolve_reference(input_dir: Path, reference: str) -> Path | None:
     reference = clean_ref(reference)
     if not reference.startswith("工作留痕"):
         return None
-    return input_dir / "source_package" / "视频提示词交付包" / Path(reference.replace("\\", "/"))
+    return input_dir / "source_package" / "video_prompt_package" / normalize_workbook_reference(reference)
 
 
 def relative_to_input(input_dir: Path, path: Path) -> str:
     return str(path.relative_to(input_dir)).replace("\\", "/")
+
+
+def normalized_reference_text(reference: str) -> str:
+    reference = clean_ref(reference)
+    if reference.startswith("工作留痕"):
+        path = Path("source_package") / "video_prompt_package" / normalize_workbook_reference(reference)
+        return str(path).replace("\\", "/")
+    return reference
 
 
 def selected_media_from_output_dir(input_dir: Path, output_dir: Path) -> tuple[str, str, str]:
@@ -95,9 +118,9 @@ def build_shots(input_dir: Path, workbook_path: Path) -> list[dict[str, Any]]:
                 notes.append(note)
 
         if image_ref:
-            notes.append(f"Workbook image_ref: {image_ref}")
+            notes.append(f"Workbook image_ref normalized: {normalized_reference_text(image_ref)}")
         if output_ref:
-            notes.append(f"Workbook output_ref: {output_ref}")
+            notes.append(f"Workbook output_ref normalized: {normalized_reference_text(output_ref)}")
 
         is_text_to_image = "text to image" in method.lower()
         shots.append(

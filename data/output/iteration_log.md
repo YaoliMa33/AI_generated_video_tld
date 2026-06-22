@@ -166,40 +166,31 @@ The holographic architectural model must continue rotating during the entire seq
 
 ## Latest Ollama Output
 
-Okay, here's a Markdown storyboard summary based on the provided project metadata and shot list, adhering strictly to your instructions.
+Okay, here's a Markdown storyboard summary based on the provided metadata and instructions:
 
-**Storyboard Summary: The Last Data – AI Video Project**
+**Story Storyboard Summary:**
 
-**Story Premise:**
-
-The protagonist, Protagonist, awakens in ruins after an extinction-level impact event. They discover the Civilization Archive hard drive, containing data related to a lost civilization’s architectural design and knowledge.  Driven by a sense of meaningless rebuilding, they begin uploading this data into WeDaVinci, utilizing a series of automated video sequences to reconstruct the city as blue holographic architecture. The boss's presence is central to the narrative – a conflict escalates during the upload process.
+**Story Premise:** The Last Data protagonist, tasked with rebuilding civilization through data archiving, confronts escalating conflict with their boss amidst a catastrophic extinction event.  The narrative focuses on the meticulous process of transforming fragmented data into holographic architecture as a symbolic act of remembrance and control.
 
 **Shot-by-Shot Storyboard:**
 
-1.  **Office Establishing Shot (s1-1):** *Tool: Wedavinci* - Protagonist stands in a partially collapsed office, looking out at a ruined cityscape. Focus on the overall environment and the protagonist's posture – contemplative and slightly lost.
-2.  **Office Pressure and Upload Routine (s1-2):** *Tool: Wedavinci* - Protagonist is shown manipulating a control panel within the office, initiating an upload sequence. A subtle visual of data streams flowing across the screen.
-3.  **Emergency Alert Interruption (s1-3):** *Tool: Wedavinci* – Rapid montage of fragmented news reports and emergency broadcasts indicating a catastrophic event. The scene focuses on the protagonist's reaction - a brief moment of shock and realization.
-4.  **Fist Close-Up (s2-1):** *Tool: PixVerse.ai* – A close-up shot of the protagonist’s hand, displaying a holographic interface showing data streams. Emphasis on texture and detail to convey urgency.
-5.  **Explosion Transition (s2-2):** *Tool: PixVerse.ai* - The scene transitions into an explosion sequence. Utilize dynamic camera movements, particle effects, and intense color grading to represent the devastation. A large explosion erupts from the frame.
-6.  **Confrontation with Boss (s2-3):** *Tool: Wedavinci* – Protagonist facing a holographic representation of the boss within the ruins. The scene is dimly lit, emphasizing the protagonist’s isolation and the looming threat. Focus on the boss's silhouette and expression.
-7.  **Waking in the Ruins (s3-1):** *Tool: Seedance* - A slow reveal – a shot of the protagonist emerging from rubble, revealing their condition. The environment is overgrown with debris.
-8.  **Activating the Civilization Archive Hard Drive (s3-2):** *Tool: PixVerse.ai* - A detailed shot showcasing the hard drive’s interface and data streams. Highlight the complexity and volume of information being transferred.
-9. **One-shot Reconstruction (s4):** *Tool: Seedance* –  A single, wide shot showing a section of the city rebuilding itself as holographic architecture. The scene is visually striking - a blend of light and shadow to emphasize the transformation.
-
-**Manual Video Production Notes:**
-
-*   **Shot Order Preservation:** Maintain the established shot order meticulously throughout the video.
-*   **Tool Attribution:**  Explicitly state "Wedavinci" in all text mentions (e.g., "Wedavinci: Text to Image to Video").
-*   **Reference Images:** Include reference images of architectural styles and holographic projections as needed, referencing them with captions within the shot notes.
-*   **Output Paths:** Ensure all output paths are correctly mapped to WeDaVinci.
-*   **Iteration Issues:** Document any iteration issues (e.g., camera angles, lighting) clearly in the notes.
+1. **Office Establishing Shot (s1-1):** Protagonist stands in an office, looking at a large screen displaying complex schematics.  The scene establishes the setting – a sterile, functional space dedicated to data processing. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on architectural design and data visualization.
+2. **Office Pressure and Upload Routine (s1-2):** Protagonist is performing an automated upload sequence within the office, emphasizing the repetitive nature of the task.  The scene shows a digital interface displaying progress bars and alerts. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on data transfer and monitoring.
+3. **Emergency Alert Interruption (s1-3):** A sudden, dramatic interruption of the upload process – perhaps a system error or alert – is captured as a quick cut. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on visual disruption and urgency.
+4. **Fist Close-Up (s2-1):** A close-up of the protagonist's face, conveying a sense of determination despite the circumstances. Tool: Wedavinci. Method: Image to Video – “image to video” focusing on facial expression.
+5. **Explosion Transition (s2-2):**  A fast-paced explosion sequence triggered by an emergency alert. The scene utilizes a 4-second burst, emphasizing chaos and destruction. Tool: PixVerse.ai. Method: "4 seconds. The apocalypse begins..." – “4 seconds” - “image to video”.
+6. **Confrontation with Boss (s2-3):** Protagonist confronts their boss amidst the aftermath of the explosion.  The scene is a dynamic, tense interaction. Tool: Wedavinci. Method: "Image to Video" – "image to video" focusing on visual conflict and power dynamics.
+7. **Waking in the Ruins (s3-1):** The protagonist awakens within the ruins, examining fragmented data fragments.  The scene highlights a sense of loss and reconstruction. Tool: Seedance. Method: “Image to Video” – "image to video" focusing on visual decay and discovery.
+8. **Activating the Civilization Archive Hard Drive (s3-2):** The protagonist activates the civilization archive hard drive, initiating data retrieval.  Tool: PixVerse.ai. Method: "Image to Video" - “image to video” – “image to video” focusing on digital activation and data recovery.
+9. **One-Shot Reconstruction (s4):** A single shot showcasing a quick reconstruction of the initial state of the city, emphasizing the holographic architecture. Tool: Seedance. Method: "Image to Video" - “image to video” – “image to video” focusing on visual representation of the rebuilding process.
 
 **Continuity Risks:**
 
-*   **Data Integrity:**  The success of this project hinges on the accuracy and completeness of the Civilization Archive data. Ensure all data is correctly transferred to WeDaVinci.
-*   **Boss’s Presence:** Maintaining a consistent visual presence for the boss throughout the video is crucial. The sequence needs to feel dynamic and engaging, not static.
-*    **Holographic Quality**:  The quality of the holographic architecture should be maintained throughout the entire process.
+*   **Data Integrity:** Ensuring the accuracy and consistency of the data being uploaded throughout the sequence is crucial.  Potential for inconsistencies or corrupted data could impact the final result.
+*   **WeDaVinci Stability:** The success of this workflow depends on WeDaVinci's stability during the text-to-video conversion process. Potential for glitches, errors, or unexpected behavior needs to be addressed.
+*   **Visual Cohesion:** Maintaining a consistent visual style and aesthetic across all shots is important.  The explosion sequence requires careful attention to detail to avoid jarring transitions.
+*   **Boss's Emotional State:** The protagonist’s emotional state (determination, grief) should remain consistently conveyed throughout the video. Subtle shifts in expression could be crucial for narrative impact.
 
 ---
 
-Let me know if you'd like me to refine any aspect of this summary or add more detail!
+Let me know if you would like any adjustments or further refinements!

@@ -1,5 +1,5 @@
 ﻿id,title,time_range,image_prompt,video_prompt,notes,image_path,video_path
-s1-1,Office establishing shot,,"Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently","Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently",Output directory: source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-1 | Workbook output_ref: 工作留痕\The_Blueprint\scene-1-The_Weight_of_Meaningless_Work\shot-1,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-3-selected.mp4
+s1-1,Office establishing shot,,"Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently","Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently",Output directory: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1 | Workbook output_ref normalized: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-3-selected.mp4
 s1-2,Office pressure and upload routine,,"[Shot]
 Type: Overhead wide shot of the office, slowly pushing in toward the protagonist
 Movement: Push-in (slow)
@@ -138,7 +138,7 @@ Sensory texture description: Harsh, husky light; cold metallic texture
 
 Negative words:No obvious disasters, such as explosions or similar large-scale destruction.
 
- @Protagonist @Device",Output directory: source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-2 | Workbook output_ref: 工作留痕\The_Blueprint\scene-1-The_Weight_of_Meaningless_Work\shot-2,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-2-selected.mp4
+ @Protagonist @Device",Output directory: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2 | Workbook output_ref normalized: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-2-selected.mp4
 s1-3,Emergency alert interruption,,"0-1 seconds:
 Several short, sharp warning beeps suddenly ring out across the office: beep, beep, beep. A red warning interface flashes onto the main monitor. The cold white fluorescent lights begin to flicker, and the red emergency warning light starts rotating.
 
@@ -179,7 +179,7 @@ Boss says:
 
 The boss’s expression becomes cold, forceful, and bureaucratic again. The protagonist freezes halfway through standing, caught between the instinct to evacuate and the pressure to obey.
 
-Vertical 9:16 aspect ratio.",Output directory: source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-3 | Workbook output_ref: 工作留痕\The_Blueprint\scene-1-The_Weight_of_Meaningless_Work\shot-3,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-3-selected.mp4
+Vertical 9:16 aspect ratio.",Output directory: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3 | Workbook output_ref normalized: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png,source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-3-selected.mp4
 s2-1,Fist close-up,,"3 second：His fingers slowly curl inward.
 
 The fist tightens.
@@ -196,7 +196,7 @@ Knuckles turn white.
 
 Veins become visible beneath the skin.
 
-A slight tremor runs through his hand. with professional cinematography and dramatic lighting",Workbook image_ref: 工作留痕\S2S1_hands.png | Workbook output_ref: 工作留痕\The_Blueprint\scene-4-Scene_2_hit\shot-1\variant-1-selected.mp4,source_package/视频提示词交付包/工作留痕/S2S1_hands.png,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4
+A slight tremor runs through his hand. with professional cinematography and dramatic lighting",Workbook image_ref normalized: source_package/video_prompt_package/work_records/S2S1_hands.png | Workbook output_ref normalized: source_package/video_prompt_package/work_records/the_last_data_assets/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4,source_package/video_prompt_package/work_records/S2S1_hands.png,source_package/video_prompt_package/work_records/the_last_data_assets/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4
 s2-2,Explosion transition,,Based on the final frame of the previous video:,Based on the final frame of the previous video:,,,
 s2-3,Confrontation with boss,,"in the same @Officefull  @Protagonist rushes forward, grabs the @Boss by the collar, and violently slams him onto the office desk.
 
@@ -246,7 +246,7 @@ Outside the floor-to-ceiling windows, distant fires grow larger with every secon
 
 Alarm sirens become faster and more urgent. Background music rises toward a climax.
 
-Cinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals.",Workbook image_ref: 工作留痕\S2S2_hit.png | Workbook output_ref: 工作留痕\The_Blueprint\scene-5-Scene_5\shot-1\variant-1-selected.mp4,source_package/视频提示词交付包/工作留痕/S2S2_hit.png,source_package/视频提示词交付包/工作留痕/The_Blueprint/scene-5-Scene_5/shot-1/variant-1-selected.mp4
+Cinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals.",Workbook image_ref normalized: source_package/video_prompt_package/work_records/S2S2_hit.png | Workbook output_ref normalized: source_package/video_prompt_package/work_records/the_last_data_assets/scene-5-Scene_5/shot-1/variant-1-selected.mp4,source_package/video_prompt_package/work_records/S2S2_hit.png,source_package/video_prompt_package/work_records/the_last_data_assets/scene-5-Scene_5/shot-1/variant-1-selected.mp4
 s3-1,Waking in the ruins,,"黑屏开始。强烈耳鸣、沉重呼吸、远处建筑坍塌声与金属摩擦声。第一人称视角。眼皮半睁半闭，黑色眼皮阴影遮挡视野。第一次睁眼仅睁开一半又无力闭合，随后缓慢重新睁开。画面逐渐显现，模糊失焦，轻微重影，焦点不断恢复。最终聚焦到废墟中的天空视角。一镜到底，真实人类昏迷后苏醒效果。
 镜头1
 第一人称视角保持不变。主人公用双手撑住地面缓慢起身，镜头从仰躺视角逐渐抬升至坐姿视角。视线从天空转向前方废墟。越来越多毁灭后的城市进入视野。真实人体运动轨迹，轻微晃动与呼吸感，一镜到底。
@@ -261,7 +261,7 @@ s3-1,Waking in the ruins,,"黑屏开始。强烈耳鸣、沉重呼吸、远处�
 第一人称视角凝视废墟城市。镜头从主人公双眼位置缓慢向后穿出头部，自然脱离身体。后脑逐渐进入画面，随后露出完整背影。平滑过渡到第三人称背影视角。一镜到底，无切镜头。
 镜头3
 保持同一主人公与同一城市布局。镜头持续向后平稳移动，同时缓慢向斜上方升高。从中景逐渐变为远景。城市尺度不断扩大。越来越多毁灭后的建筑进入画面。主人公比例持续缩小。最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。电影级无人机运镜。
-镜头4",Image reference directory: source_package/视频提示词交付包/工作留痕/image_referrence_for_seedance_s3-1 | Workbook image_ref: 工作留痕\image_referrence_for_seedance_s3-1 | Workbook output_ref: 工作留痕\shorts_need\s3-1_wake.mp4,,source_package/视频提示词交付包/工作留痕/shorts_need/s3-1_wake.mp4
+镜头4",Image reference directory: source_package/video_prompt_package/work_records/seedance_s3_reference_images | Workbook image_ref normalized: source_package/video_prompt_package/work_records/seedance_s3_reference_images | Workbook output_ref normalized: source_package/video_prompt_package/work_records/selected_video_clips/s3-1_wake.mp4,,source_package/video_prompt_package/work_records/selected_video_clips/s3-1_wake.mp4
 s3-2,Activating the civilization archive hard drive,,"Main subjects:
 
 Scene:
@@ -318,7 +318,7 @@ A low electronic startup sound begins. Instantly, a blue indicator light along t
 
 The scene ends the moment the scan is completed, setting up the next sequence in which the holographic system activates.
 
-This is Scene S3-2: Activating the Hard Drive.",Workbook image_ref: A young white male wearing a gray-brown jacket. | Workbook output_ref: A silver metallic external hard drive with the words “CIVILIZATION ARCHIVE” printed on it.,,
+This is Scene S3-2: Activating the Hard Drive.",Workbook image_ref normalized: A young white male wearing a gray-brown jacket. | Workbook output_ref normalized: A silver metallic external hard drive with the words “CIVILIZATION ARCHIVE” printed on it.,,
 s4,One-shot reconstruction,,"固定镜头。 世界末日后的废墟。 教堂已经坍塌。 地面布满碎石和残骸。 浓烟缓慢飘动。 空气中漂浮灰尘。 远处偶尔有火光。 超写实。 电影级灾难场景。
 镜头1
 固定镜头。 废墟地面开始出现蓝色扫描光。 无数蓝色粒子从地下升起。 从无到有，光影迅速构建出建筑的轮廓线条，并按顺时针快转动。蓝色的全息网格向上快速生长、扫描，最终形成完整的全息建筑影像，发光强度高，科技感。 
@@ -347,4 +347,4 @@ s4,One-shot reconstruction,,"固定镜头。 世界末日后的废墟。 教堂�
 镜头7
 一道巨大的蓝色扫描波从眼前向远方扩散。 扫描波经过的区域开始出现建筑轮廓。 无数建筑同时生长。 蓝色全息线框从废墟中升起。 街区被重新绘制。 道路轮廓显现。 桥梁生成。 历史建筑重建。 现代建筑重建。 整个城市同时被构建。 仿佛正在重新绘制文明。
 镜头8
-镜头9",Image reference directory: source_package/视频提示词交付包/工作留痕/image_referrence_for_seedance_s4 | Workbook image_ref: 工作留痕\image_referrence_for_seedance_s4 | Workbook output_ref: 工作留痕\shorts_need\s4 seedance_onecut.mp4,,source_package/视频提示词交付包/工作留痕/shorts_need/s4 seedance_onecut.mp4
+镜头9",Image reference directory: source_package/video_prompt_package/work_records/seedance_s4_reference_images | Workbook image_ref normalized: source_package/video_prompt_package/work_records/seedance_s4_reference_images | Workbook output_ref normalized: source_package/video_prompt_package/work_records/selected_video_clips/s4_seedance_onecut.mp4,,source_package/video_prompt_package/work_records/selected_video_clips/s4_seedance_onecut.mp4
