@@ -12,10 +12,11 @@
     "aspect_ratio": "9:16",
     "final_video_path": "media/final_video.mp4"
   },
-  "workflow_mode": "0.5-to-1 refinement of an existing AI-video production package",
+  "workflow_mode": "0-to-1 AI-video prompt workflow: 0-to-0.5 script-to-prompt generation plus 0.5-to-1 asset-grounded refinement",
   "workflow_parts": [
-    "Part 1: Code/NLP workflow that reads existing script, draft prompts, reference images, generated clips, and iteration notes",
-    "Part 1 output: source prompt table, refined prompt table, refinement report, storyboard summary, and production manifest",
+    "Stage 1: 0-to-0.5 script-to-prompt generation from story_script.md; this stage writes prompt artifacts only and does not modify media assets",
+    "Stage 2: 0.5-to-1 refinement that reads existing draft prompts, reference images, generated clips, and iteration notes",
+    "Code/NLP output: generated prompt table, source prompt table, refined prompt table, refinement report, storyboard summary, and production manifest",
     "Part 2: Manual AI video production workflow in WeDaVinci or another selected tool"
   ],
   "source_script": "The Last Data: a future architectural data worker thinks scanning and uploading civilization data is meaningless. During an extinction-level impact alert, conflict with the boss escalates. After the catastrophe, the protagonist wakes in ruins, discovers the Civilization Archive hard drive, and the stored data becomes the basis for rebuilding the city as blue holographic architecture.",
@@ -259,6 +260,9 @@
     }
   ],
   "generated_files": [
+    "generated_prompt_table.csv",
+    "script_to_prompt_plan.md",
+    "stage1_generation_manifest.json",
     "storyboard.json",
     "production_manifest.json",
     "wedavinci_upload_prompts.md",

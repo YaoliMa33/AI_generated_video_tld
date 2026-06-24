@@ -2,10 +2,13 @@
 
 ## Workflow Position
 
-This project is a 0.5-to-1 AI-video refinement workflow. It assumes that a story premise, draft prompts, reference images, selected clips, and iteration notes already exist. The code does not claim to generate a finished video from an empty prompt.
+This project uses a two-stage 0-to-1 AI-video prompt workflow. Stage 1 generates an initial shot and prompt plan from the story script. Stage 2 refines the prompt package using existing draft prompts, reference images, selected clips, and iteration notes.
+
+Stage 1 does not create or replace image/video files. The existing images remain the grounding assets for Stage 2 refinement and for manual video generation.
 
 ## Generated Refinement Artifacts
 
+- `generated_prompt_table.csv`: first-pass 0-to-0.5 prompts generated from the story script.
 - `source_prompt_table.csv`: the source workbook prompts preserved as evidence.
 - `refined_prompt_table.csv`: manual-upload prompts rebuilt from the source prompts with continuity, asset, and tool constraints.
 - `wedavinci_upload_prompts.md`: human-readable refined prompt package for manual upload.
@@ -87,39 +90,17 @@ This project is a 0.5-to-1 AI-video refinement workflow. It assumes that a story
 
 ## Ollama Refinement Summary
 
-## Refinement Summary: The Last Data - Half-Finished AI Video Production
+Okay, here’s a refinement summary for the AI video project, adhering strictly to your instructions:
 
-This project is currently in a state of refinement, focusing on enhancing the visual storytelling and technical execution.  The core narrative revolves around Protagonist and Boss grappling with the implications of an extinction-level event – the collapse of civilization data. This requires careful attention to shot composition, prompt consistency, and workflow integration. The AI video production pipeline is currently being refined through iterative prompting and manual tool usage.
-
-**Story Premise:** The protagonist, a Data Worker, discovers a hard drive containing the remnants of a lost Civilization Archive.  This archive holds the blueprints for rebuilding society after a catastrophic event. Protagonist and Boss are tasked with this reconstruction as the world collapses around them.
+**Story Premise:** The Last Data is set in a future architectural data worker who believes scanning and uploading civilization data is meaningless. During an extinction-level impact alert, they experience a catastrophic event that forces them into ruins.  They discover a hard drive containing the archived data of a lost civilization – the Civilization Archive – and realize it’s the key to rebuilding society as blue holographic architecture.
 
 **Shot-by-Shot Storyboard:**
 
-*   **s1-1:** "Office establishing shot" - *Tool: Wedavinci*. – Focus on a large, slightly dilapidated office space, emphasizing dust motes and muted lighting to establish the setting of the future.  The composition should convey a sense of decay and isolation.
-*   **s1-2:** “Office pressure and upload routine” - *Tool: Wedavinci*. – A fast-paced sequence depicting the protagonist manually uploading data from the hard drive, emphasizing movement and urgency. Utilize quick cuts to highlight the process.
-*   **s1-3:** "Emergency alert interruption" - *Tool: Wedavinci*. –  A dramatic, chaotic scene showing a simulated emergency alert triggered by the archive's contents. The visual should convey shock and potential danger.
-*   **s2-1:** “Fist close-up” - *Tool: Wedavinci*. – A close-up of the protagonist’s face, conveying determination or weariness as they examine the hard drive.  Focus on subtle details to establish character presence.
-*   **s2-2:** "Explosion transition" - *Tool: PixVerse.ai*. – This shot will use a 4-second sequence to depict an explosion erupting from the scene, sending shockwaves and dust through the area. The camera should be angled downwards to emphasize the scale of the destruction.
-*   **s2-3:** "Confrontation with boss" - *Tool: Wedavinci*. – Protagonist facing Boss in a dimly lit room. Focus on the protagonist's posture, conveying a sense of conflict and perhaps apprehension.  The lighting should be stark and create shadows to emphasize the tension.
-*   **s3-1:** "Waking in the ruins" - *Tool: Seedance*. – A wide shot showcasing the protagonist emerging from rubble, looking at the archive hard drive. The composition should highlight the vastness of the ruined landscape.
-*    **s3-2:** “Activating the civilization archive hard drive” - *Tool: PixVerse.ai*. –  A slow, deliberate sequence showing the process of activating the hard drive, highlighting the data being restored. Use a color palette that shifts from muted to brighter tones as it's activated.
-*   **s4:** "One-shot reconstruction" - *Tool: Seedance*. – A single shot showcasing the complete archive hard drive and its contents. The composition should be visually striking, emphasizing the scale of the data.
+*   **Stage 1 (0-to-0.5): Script & Initial Shot Plan.** The script will detail initial scene setups, focusing on establishing a sense of isolation and bleakness within the ruins.  We'll generate a preliminary shot plan outlining key camera angles, lighting, and composition for the first few scenes – prioritizing visual storytelling over narrative details.
+*   **Stage 2 (0.5-1): Refinement - Prompt Review & Iteration.** We’ll meticulously review the existing draft prompts generated in Stage 1.  Specifically, we'll focus on refining the image prompts to better capture the desired atmosphere of decay and technological remnants.  We will also refine the video prompt based on initial feedback from the shot plan.
+*   **Stage 3 (0.5-1): Manual AI Video Production Workflow.** The script will be directly translated into detailed, specific prompts for WeDaVinci, PixVerse.ai, Seedance, or equivalent tool.  The focus is on establishing a consistent visual style and pacing – aiming for a slow, deliberate aesthetic reflecting the protagonist's disillusionment.
+*   **Stage 4 (0.5-1): Initial Video Production.** The initial video production will be initiated with the generated prompts. We’ll prioritize establishing the core visuals of each scene, focusing on establishing a consistent color palette and lighting scheme to create a melancholic mood.
 
-**Manual Video Production Notes (WeDaVinci & PixVerse.ai):**
+**Continuity Risks:**  The transition between scenes needs careful consideration. Ensure sufficient visual "space" is allocated for each shot to avoid jarring transitions. The 'explosion' sequence in Stage 2 requires significant attention to detail – the imagery should feel impactful and believable within the context of the ruins. Maintaining consistency with the initial shot plan will be crucial.
 
-*   Utilize WeDaVinci for initial text-to-image generation based on the story outline.
-*   Employ PixVerse.ai to create the final video segments, focusing on establishing a consistent visual style and pacing.  Specifically, prioritize smooth transitions between shots.
-*   Maintain shot order throughout the entire production – this is crucial for narrative cohesion.
-*   Carefully attribute all tools used (WeDaVinci, PixVerse.ai) consistently.
-
-**Continuity Risks:**
-
-*   Potential inconsistencies in lighting and color grading across different scenes will require careful attention during post-production.
-*   The transition between the initial text-to-image generation and the final video segments needs to be seamless – ensure smooth transitions are implemented.  A slight delay or visual stutter could disrupt the flow of the narrative.
-
-**Refinement Strategy:**
-
-Phase 1 (0.5 - 1 refinement): Focus on refining the composition of s2-2, particularly the explosion transition and the confrontation scene.  Iterate on the lighting to enhance the dramatic impact. Refine shot transitions between scenes – ensure a consistent flow.
-Phase 2 (0.5 - 1 refinement):  Strengthen the visual storytelling through more detailed character expressions and subtle environmental cues.  Fine-tune the color palette for greater emotional resonance. Address any potential inconsistencies in the generated clips.
-
-**Note:** This summary prioritizes establishing a solid foundation for the AI video production. Further iteration will be driven by feedback from the initial shot list and the generated content.
+**Refinement Strategy:**  The primary refinement strategy involves iterative prompting based on feedback from the existing visuals. We’ll use a combination of prompt adjustments (e.g., adding details, altering composition) to achieve a cohesive and emotionally resonant final product. The focus is on enhancing the visual storytelling – emphasizing atmosphere, color palette, and overall mood rather than narrative exposition.  We'll also incorporate subtle 'visual cues' within the prompts to guide the AI towards a specific aesthetic (e.g., suggesting dust motes, crumbling textures).

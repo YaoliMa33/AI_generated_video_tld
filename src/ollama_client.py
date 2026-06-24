@@ -12,8 +12,9 @@ class OllamaError(RuntimeError):
 
 
 class OllamaClient:
-    def __init__(self, base_url: str) -> None:
+    def __init__(self, base_url: str, timeout: int = 300) -> None:
         self.base_url = base_url.rstrip("/")
+        self.timeout = timeout
 
     def chat(
         self,
@@ -49,7 +50,7 @@ class OllamaClient:
         )
 
         try:
-            with request.urlopen(http_request, timeout=180) as response:
+            with request.urlopen(http_request, timeout=self.timeout) as response:
                 response_text = response.read().decode("utf-8")
         except error.HTTPError as exc:
             response_text = exc.read().decode("utf-8", errors="replace")
@@ -91,7 +92,7 @@ class OllamaClient:
         )
 
         try:
-            with request.urlopen(http_request, timeout=180) as response:
+            with request.urlopen(http_request, timeout=self.timeout) as response:
                 response_text = response.read().decode("utf-8")
         except error.HTTPError as exc:
             response_text = exc.read().decode("utf-8", errors="replace")

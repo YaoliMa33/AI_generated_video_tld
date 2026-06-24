@@ -237,10 +237,13 @@ def write_refinement_report(output_dir: Path, refined_shots: list[dict[str, Any]
         "",
         "## Workflow Position",
         "",
-        "This project is a 0.5-to-1 AI-video refinement workflow. It assumes that a story premise, draft prompts, reference images, selected clips, and iteration notes already exist. The code does not claim to generate a finished video from an empty prompt.",
+        "This project uses a two-stage 0-to-1 AI-video prompt workflow. Stage 1 generates an initial shot and prompt plan from the story script. Stage 2 refines the prompt package using existing draft prompts, reference images, selected clips, and iteration notes.",
+        "",
+        "Stage 1 does not create or replace image/video files. The existing images remain the grounding assets for Stage 2 refinement and for manual video generation.",
         "",
         "## Generated Refinement Artifacts",
         "",
+        "- `generated_prompt_table.csv`: first-pass 0-to-0.5 prompts generated from the story script.",
         "- `source_prompt_table.csv`: the source workbook prompts preserved as evidence.",
         "- `refined_prompt_table.csv`: manual-upload prompts rebuilt from the source prompts with continuity, asset, and tool constraints.",
         "- `wedavinci_upload_prompts.md`: human-readable refined prompt package for manual upload.",
@@ -322,13 +325,20 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
         {key: value for key, value in shot.items() if not key.endswith("_resolved")}
         for shot in refined_shots
     ]
+    stage1_files = [
+        "generated_prompt_table.csv",
+        "script_to_prompt_plan.md",
+        "stage1_generation_manifest.json",
+    ]
+    existing_stage1_files = [name for name in stage1_files if (output_dir / name).exists()]
 
     manifest = {
         "project": config.get("project", {}),
-        "workflow_mode": "0.5-to-1 refinement of an existing AI-video production package",
+        "workflow_mode": "0-to-1 AI-video prompt workflow: 0-to-0.5 script-to-prompt generation plus 0.5-to-1 asset-grounded refinement",
         "workflow_parts": [
-            "Part 1: Code/NLP workflow that reads existing script, draft prompts, reference images, generated clips, and iteration notes",
-            "Part 1 output: source prompt table, refined prompt table, refinement report, storyboard summary, and production manifest",
+            "Stage 1: 0-to-0.5 script-to-prompt generation from story_script.md; this stage writes prompt artifacts only and does not modify media assets",
+            "Stage 2: 0.5-to-1 refinement that reads existing draft prompts, reference images, generated clips, and iteration notes",
+            "Code/NLP output: generated prompt table, source prompt table, refined prompt table, refinement report, storyboard summary, and production manifest",
             "Part 2: Manual AI video production workflow in WeDaVinci or another selected tool",
         ],
         "source_script": config.get("source_script", ""),
@@ -336,6 +346,7 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
         "shots": public_shots,
         "refined_shots": public_refined_shots,
         "generated_files": [
+            *existing_stage1_files,
             "storyboard.json",
             "production_manifest.json",
             "wedavinci_upload_prompts.md",
@@ -367,7 +378,8 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
         "# Refined Manual Upload Prompts",
         "",
         "This file was generated from the local project configuration, original prompt workbook, declared reference assets, existing clips, and Ollama output.",
-        "It is a 0.5-to-1 refinement package: the source prompts are preserved, and the manual-upload prompts add continuity and asset constraints.",
+        "It is the Stage 2 output in a two-stage workflow: Stage 1 generates a first script-to-prompt plan, and Stage 2 refines prompts using existing image/video evidence.",
+        "Existing images and selected clips are not replaced by the code; they remain the grounding assets for manual video generation.",
         "Video generation is manual and is not automated by this repository.",
         "",
         "## Refined Prompt Package",
