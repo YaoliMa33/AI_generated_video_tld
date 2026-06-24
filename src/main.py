@@ -11,8 +11,9 @@ from ollama_client import OllamaClient
 
 SYSTEM_PROMPT = """You are assisting an academic AI-video project.
 
-Your task is to convert provided project metadata, shot prompts, image references,
-and video-shot notes into structured production material for manual WeDaVinci upload.
+Your task is to help refine an existing half-finished AI-video production package.
+The project already contains a story premise, draft prompts, reference images,
+selected generated clips, and iteration notes. Treat these as source evidence.
 
 Integrity rules:
 - Do not invent missing scenes, assets, dialogue, or model outputs.
@@ -20,6 +21,7 @@ Integrity rules:
 - If a prompt is ambiguous, mark it as a risk instead of silently resolving it.
 - Keep image-generation prompts separate from image-to-video prompts.
 - Produce content that is reproducible from the provided config.
+- Present the workflow as "0.5 to 1 refinement", not as "0 to 1 generation".
 """
 
 
@@ -102,9 +104,9 @@ def build_generation_prompt(config: dict[str, Any], shots: list[dict[str, Any]])
         for shot in shots
     ]
     return (
-        "Create a concise Markdown storyboard summary for this AI video project. "
+        "Create a concise Markdown refinement summary for this half-finished AI video project. "
         "Do not answer only OK. Use exactly these sections: Story Premise, Shot-by-Shot Storyboard, "
-        "Manual Video Production Notes, Continuity Risks. "
+        "Manual Video Production Notes, Continuity Risks, Refinement Strategy. "
         "Do not invent character names, tools, file paths, dialogue, or assets. "
         "Refer to the characters only as Protagonist and Boss. "
         "The manual production tools are exactly the tools listed in the shot list.\n\n"
@@ -115,7 +117,7 @@ def build_generation_prompt(config: dict[str, Any], shots: list[dict[str, Any]])
     )
 
 
-def write_prompt_table(output_dir: Path, shots: list[dict[str, Any]]) -> None:
+def write_prompt_table(output_dir: Path, shots: list[dict[str, Any]], filename: str = "prompt_table.csv") -> None:
     fields = [
         "id",
         "title",
@@ -126,11 +128,142 @@ def write_prompt_table(output_dir: Path, shots: list[dict[str, Any]]) -> None:
         "image_path",
         "video_path",
     ]
-    with (output_dir / "prompt_table.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+    with (output_dir / filename).open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         for shot in shots:
             writer.writerow({field: shot.get(field, "") for field in fields})
+
+
+def build_refinement_constraints(config: dict[str, Any], shot: dict[str, Any]) -> list[str]:
+    project = config.get("project", {})
+    aspect_ratio = project.get("aspect_ratio", "9:16")
+    constraints = [
+        f"Keep the declared shot id and story position: {shot.get('id', '')}.",
+        f"Keep the manual generation tool and method: {shot.get('tool', '')} / {shot.get('method', '')}.",
+        f"Keep the target aspect ratio: {aspect_ratio}.",
+        "Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.",
+        "Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.",
+    ]
+    if shot.get("image_path"):
+        constraints.append(f"Use the declared image reference as visual evidence: {shot['image_path']}.")
+    if shot.get("video_path"):
+        constraints.append(f"Use the declared generated clip as the existing production state: {shot['video_path']}.")
+    return constraints
+
+
+def refined_prompt(source_prompt: str, constraints: list[str]) -> str:
+    source_prompt = source_prompt.strip()
+    constraint_text = "\n".join(f"- {item}" for item in constraints)
+    return (
+        "Refined manual-upload prompt based on the existing source material.\n\n"
+        "Source prompt:\n"
+        f"{source_prompt}\n\n"
+        "Refinement constraints:\n"
+        f"{constraint_text}\n\n"
+        "Production instruction:\n"
+        "Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets."
+    )
+
+
+def risk_notes(shot: dict[str, Any]) -> str:
+    risks: list[str] = []
+    if not shot.get("image_path"):
+        risks.append("No declared image reference; manual reviewer should verify visual continuity.")
+    if not shot.get("video_path"):
+        risks.append("No declared generated clip; this shot may still require manual generation.")
+    if len(str(shot.get("video_prompt", ""))) > 1800:
+        risks.append("Long video prompt; manual uploader may need to split or shorten it for the target platform.")
+    if not risks:
+        risks.append("Ready for manual review and upload.")
+    return " ".join(risks)
+
+
+def build_refined_shots(config: dict[str, Any], shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    refined: list[dict[str, Any]] = []
+    for shot in shots:
+        constraints = build_refinement_constraints(config, shot)
+        refined.append(
+            {
+                **shot,
+                "source_image_prompt": shot.get("image_prompt", ""),
+                "source_video_prompt": shot.get("video_prompt", ""),
+                "image_prompt": refined_prompt(str(shot.get("image_prompt", "")), constraints),
+                "video_prompt": refined_prompt(str(shot.get("video_prompt", "")), constraints),
+                "notes": f"{shot.get('notes', '')} | Refinement status: {risk_notes(shot)}".strip(" |"),
+            }
+        )
+    return refined
+
+
+def write_refined_prompt_table(output_dir: Path, refined_shots: list[dict[str, Any]]) -> None:
+    fields = [
+        "id",
+        "title",
+        "tool",
+        "method",
+        "source_image_prompt",
+        "refined_image_prompt",
+        "source_video_prompt",
+        "refined_video_prompt",
+        "image_path",
+        "video_path",
+        "notes",
+    ]
+    with (output_dir / "refined_prompt_table.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
+        for shot in refined_shots:
+            writer.writerow(
+                {
+                    "id": shot.get("id", ""),
+                    "title": shot.get("title", ""),
+                    "tool": shot.get("tool", ""),
+                    "method": shot.get("method", ""),
+                    "source_image_prompt": shot.get("source_image_prompt", ""),
+                    "refined_image_prompt": shot.get("image_prompt", ""),
+                    "source_video_prompt": shot.get("source_video_prompt", ""),
+                    "refined_video_prompt": shot.get("video_prompt", ""),
+                    "image_path": shot.get("image_path", ""),
+                    "video_path": shot.get("video_path", ""),
+                    "notes": shot.get("notes", ""),
+                }
+            )
+
+
+def write_refinement_report(output_dir: Path, refined_shots: list[dict[str, Any]], ollama_text: str) -> None:
+    lines = [
+        "# Prompt Refinement Report",
+        "",
+        "## Workflow Position",
+        "",
+        "This project is a 0.5-to-1 AI-video refinement workflow. It assumes that a story premise, draft prompts, reference images, selected clips, and iteration notes already exist. The code does not claim to generate a finished video from an empty prompt.",
+        "",
+        "## Generated Refinement Artifacts",
+        "",
+        "- `source_prompt_table.csv`: the source workbook prompts preserved as evidence.",
+        "- `refined_prompt_table.csv`: manual-upload prompts rebuilt from the source prompts with continuity, asset, and tool constraints.",
+        "- `wedavinci_upload_prompts.md`: human-readable refined prompt package for manual upload.",
+        "- `production_manifest.json`: reproducible inventory of inputs, outputs, and declared assets.",
+        "",
+        "## Shot-Level Readiness",
+        "",
+    ]
+    for shot in refined_shots:
+        lines.extend(
+            [
+                f"### {shot.get('id', '')}: {shot.get('title', '')}",
+                "",
+                f"- Tool: {shot.get('tool', '')}",
+                f"- Method: {shot.get('method', '')}",
+                f"- Image reference: {shot.get('image_path', '') or 'not declared'}",
+                f"- Existing clip: {shot.get('video_path', '') or 'not declared'}",
+                f"- Notes: {shot.get('notes', '')}",
+                "",
+            ]
+        )
+    lines.extend(["## Ollama Refinement Summary", "", ollama_text, ""])
+    (output_dir / "refinement_report.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_iteration_log(output_dir: Path, config: dict[str, Any], ollama_text: str) -> None:
@@ -175,27 +308,41 @@ def write_iteration_log(output_dir: Path, config: dict[str, Any], ollama_text: s
 
 def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str, Any]], ollama_text: str) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    refined_shots = build_refined_shots(config, shots)
     write_prompt_table(output_dir, shots)
+    write_prompt_table(output_dir, shots, "source_prompt_table.csv")
+    write_refined_prompt_table(output_dir, refined_shots)
+    write_refinement_report(output_dir, refined_shots, ollama_text)
     write_iteration_log(output_dir, config, ollama_text)
     public_shots = [
         {key: value for key, value in shot.items() if not key.endswith("_resolved")}
         for shot in shots
     ]
+    public_refined_shots = [
+        {key: value for key, value in shot.items() if not key.endswith("_resolved")}
+        for shot in refined_shots
+    ]
 
     manifest = {
         "project": config.get("project", {}),
+        "workflow_mode": "0.5-to-1 refinement of an existing AI-video production package",
         "workflow_parts": [
-            "Part 1: Code/NLP workflow with local Ollama prompt generation",
+            "Part 1: Code/NLP workflow that reads existing script, draft prompts, reference images, generated clips, and iteration notes",
+            "Part 1 output: source prompt table, refined prompt table, refinement report, storyboard summary, and production manifest",
             "Part 2: Manual AI video production workflow in WeDaVinci or another selected tool",
         ],
         "source_script": config.get("source_script", ""),
         "shot_count": len(shots),
         "shots": public_shots,
+        "refined_shots": public_refined_shots,
         "generated_files": [
             "storyboard.json",
             "production_manifest.json",
             "wedavinci_upload_prompts.md",
             "prompt_table.csv",
+            "source_prompt_table.csv",
+            "refined_prompt_table.csv",
+            "refinement_report.md",
             "iteration_log.json",
             "iteration_log.md",
         ],
@@ -208,7 +355,7 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
 
     storyboard_payload = {
         "source": "ollama",
-        "note": "The local LLM receives compact shot excerpts. Full prompts are preserved in prompt_table.csv and production_manifest.json.",
+        "note": "The local LLM receives compact shot excerpts for refinement-oriented summarization. Full source prompts are preserved in source_prompt_table.csv and production_manifest.json; refined prompts are written to refined_prompt_table.csv.",
         "raw_model_output": ollama_text,
     }
     (output_dir / "storyboard.json").write_text(
@@ -217,15 +364,16 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
     )
 
     markdown = [
-        "# WeDaVinci Manual Upload Prompts",
+        "# Refined Manual Upload Prompts",
         "",
-        "This file was generated from the local project configuration, original prompt workbook, and Ollama output.",
+        "This file was generated from the local project configuration, original prompt workbook, declared reference assets, existing clips, and Ollama output.",
+        "It is a 0.5-to-1 refinement package: the source prompts are preserved, and the manual-upload prompts add continuity and asset constraints.",
         "Video generation is manual and is not automated by this repository.",
         "",
-        "## Source Prompt Table",
+        "## Refined Prompt Package",
         "",
     ]
-    for shot in shots:
+    for shot in refined_shots:
         markdown.extend(
             [
                 f"### {shot.get('id', '')}: {shot.get('title', '')}",
@@ -235,11 +383,11 @@ def write_outputs(output_dir: Path, config: dict[str, Any], shots: list[dict[str
                 f"- Image reference: {shot.get('image_path', '') or 'not declared'}",
                 f"- Video output: {shot.get('video_path', '') or 'not declared'}",
                 "",
-                "Image prompt:",
+                "Refined image prompt:",
                 "",
                 str(shot.get("image_prompt", "")).strip() or "not declared",
                 "",
-                "Video prompt:",
+                "Refined video prompt:",
                 "",
                 str(shot.get("video_prompt", "")).strip() or "not declared",
                 "",

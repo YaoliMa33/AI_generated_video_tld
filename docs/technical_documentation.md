@@ -4,18 +4,22 @@
 
 This repository documents the reproducible code side of the AI-video project **The Last Data**. The final video production is manual, but the prompt process is made auditable through Python scripts, structured config files, generated tables, iteration logs, and a local Ollama API call.
 
+The method is a **0.5-to-1 refinement workflow**. It does not claim to create a complete video from an empty story prompt. Instead, it starts from existing production material: a story premise, draft prompts, reference images, selected generated clips, scene notes, and iteration records. The code organizes these materials, validates them, and produces a refined prompt package for manual AI-video tools.
+
 ## Two-Part Workflow
 
 ### Part 1: Code/NLP Workflow
 
-The code performs the NLP/prompt workflow:
+The code performs the NLP/prompt refinement workflow:
 
 1. Read the workbook `data/input/prompt_image_video.xlsx`.
 2. Extract shot IDs, tools, methods, prompts, reference images, output paths, and iteration notes.
 3. Build `data/input/project_config.json`.
 4. Validate declared media paths.
 5. Call local Ollama through `http://localhost:11434/api/generate`.
-6. Write reproducible output artifacts into `data/output/`.
+6. Preserve the workbook prompts as source evidence.
+7. Generate refined manual-upload prompts with explicit continuity, asset, and tool constraints.
+8. Write reproducible output artifacts into `data/output/`.
 
 ### Part 2: Manual AI Video Production Workflow
 
@@ -46,11 +50,14 @@ The script preserves workbook values and does not invent missing clips. If a wor
 
 ### `src/main.py`
 
-This script validates the config, calls Ollama, and writes output artifacts.
+This script validates the config, calls Ollama, and writes output artifacts. It keeps the original workbook prompts separate from the refined prompts so that the workflow remains auditable.
 
 Output files:
 
 - `data/output/prompt_table.csv`
+- `data/output/source_prompt_table.csv`
+- `data/output/refined_prompt_table.csv`
+- `data/output/refinement_report.md`
 - `data/output/iteration_log.md`
 - `data/output/iteration_log.json`
 - `data/output/production_manifest.json`
@@ -71,8 +78,10 @@ This file contains the local Ollama HTTP client. The current config uses:
 - The program does not silently create missing images, videos, prompts, or scenes.
 - Missing declared files are treated as errors.
 - The prompt workbook remains included as the source of truth.
-- The local LLM output is treated as a supporting summary, not as a replacement for the original prompt table.
-- Full prompts are preserved in `prompt_table.csv`, `production_manifest.json`, and `wedavinci_upload_prompts.md`.
+- The local LLM output is treated as a supporting summary and refinement aid, not as a replacement for source evidence.
+- Source prompts are preserved in `source_prompt_table.csv`, `prompt_table.csv`, and `production_manifest.json`.
+- Refined prompts are written separately in `refined_prompt_table.csv` and `wedavinci_upload_prompts.md`.
+- The method is described as improving an existing AI-video package from 0.5 to 1, not as generating a video from zero.
 
 ## Reproducibility Notes
 

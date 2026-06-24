@@ -205,7 +205,8 @@ def main() -> None:
             "vision_model": "",
         },
         "global_constraints": [
-            "Part 1 is Code/NLP Workflow: input script, call local Ollama API, generate prompt table and iteration record.",
+            "Part 1 is Code/NLP Workflow: read existing story, draft prompts, reference images, generated clips, and iteration notes; then call local Ollama API for refinement-oriented structuring.",
+            "This is a 0.5-to-1 workflow for improving a half-finished AI-video production package, not a 0-to-1 story-to-video generator.",
             "Part 2 is Manual AI Video Production Workflow: manually enter final prompts into WeDaVinci, PixVerse.ai, Seedance, or equivalent tool.",
             "Do not claim that WeDaVinci is called by code.",
             "Preserve shot order, tool attribution, reference images, output paths, and iteration issues from the workbook.",

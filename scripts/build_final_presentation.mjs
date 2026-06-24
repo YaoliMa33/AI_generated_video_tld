@@ -84,7 +84,7 @@ function chrome(slide, section = "THE LAST DATA") {
   rect(slide, 84, 50, 10, 10, C.amber, "none", 5);
   rect(slide, 104, 50, 10, 10, C.green, "none", 5);
   text(slide, section, 142, 46, 420, 20, { fontSize: 12, bold: true, color: C.muted });
-  text(slide, "Code/NLP Workflow + Manual AI Video Production", 758, 46, 390, 20, {
+  text(slide, "0.5-to-1 Prompt Refinement + Manual AI Video Production", 758, 46, 390, 20, {
     fontSize: 12,
     color: C.muted,
     alignment: "right",
@@ -156,8 +156,8 @@ async function buildDeck() {
   let s = p.slides.add();
   chrome(s, "NLP PROJECT WEEK");
   text(s, "The Last Data", 76, 152, 650, 82, { fontSize: 56, bold: true, color: C.red });
-  text(s, "A reproducible prompt-engineering and AI-video workflow", 80, 250, 610, 34, { fontSize: 22, color: C.ink });
-  bullet(s, ["Code reads script, prompts, assets, and iteration notes", "Local Ollama API generates a storyboard summary", "Manual tools generate clips; editing exports final video"], 82, 336, 560, 48);
+  text(s, "A reproducible 0.5-to-1 AI-video refinement workflow", 80, 250, 610, 34, { fontSize: 22, color: C.ink });
+  bullet(s, ["Code reads existing story, draft prompts, assets, and iteration notes", "Local Ollama API supports refinement and continuity review", "Manual tools generate or revise clips; editing exports final video"], 82, 336, 560, 48);
   await addImage(s, img.office1, 760, 126, 350, 510, "Office scene still");
   text(s, "Yaoli Ma / Ziyu Guo", 82, 622, 320, 24, { fontSize: 16, color: C.muted });
 
@@ -169,9 +169,9 @@ async function buildDeck() {
 
   s = p.slides.add();
   chrome(s);
-  title(s, "Assignment Split", "Two workflows, one final film.", "The code workflow is reproducible; the AI-video workflow remains manual and documented.");
-  flow(s, ["Input script", "Ollama prompt workflow", "Prompt table + logs", "Manual AI video tools", "Edited final video"], 86, 340, 1108);
-  stat(s, "Code/NLP", "Python + Ollama API", 92, 238, 300, C.blue);
+  title(s, "Assignment Split", "A half-finished package becomes a final film.", "The code workflow refines existing production material; the AI-video workflow remains manual and documented.");
+  flow(s, ["Existing script + assets", "Ollama refinement workflow", "Source + refined prompt tables", "Manual AI video tools", "Edited final video"], 86, 340, 1108);
+  stat(s, "Code/NLP", "0.5-to-1 refinement", 92, 238, 300, C.blue);
   stat(s, "Manual production", "WeDaVinci / PixVerse / Seedance", 430, 238, 392, C.red);
   stat(s, "Evidence", "CSV, JSON, Markdown, PPTX", 860, 238, 300, C.green);
 
@@ -183,24 +183,24 @@ async function buildDeck() {
 
   s = p.slides.add();
   chrome(s);
-  title(s, "Code Pipeline", "Workbook to config to outputs.", "The pipeline avoids hidden repair: it validates paths and preserves the original prompts.");
-  flow(s, ["Read xlsx", "Build JSON", "Validate media", "Call Ollama", "Write outputs"], 96, 258, 1088);
+  title(s, "Code Pipeline", "Workbook to refinement package.", "The pipeline avoids hidden repair: it validates paths, preserves source prompts, and writes refined prompts separately.");
+  flow(s, ["Read xlsx", "Build JSON", "Validate media", "Call Ollama", "Write refined outputs"], 96, 258, 1088);
   code(s, `python src/build_config_from_workbook.py \\\n  --workbook data/input/prompt_image_video.xlsx \\\n  --input-dir data/input \\\n  --output data/input/project_config.json\n\npython src/main.py \\\n  --config data/input/project_config.json \\\n  --output data/output`, 120, 420, 980, 170);
 
   s = p.slides.add();
   chrome(s);
-  title(s, "Ollama API", "The LLM call is local and reproducible.", "No external API key is required for the code workflow.");
+  title(s, "Ollama API", "The LLM call supports refinement.", "No external API key is required for the code workflow.");
   code(s, `POST http://localhost:11434/api/generate\n\n{\n  "model": "gemma3:1b",\n  "prompt": "<project premise + shot list>",\n  "stream": false,\n  "options": { "temperature": 0.2 }\n}`, 86, 284, 560, 250);
-  bullet(s, ["The model summarizes storyboard and continuity risks", "Full prompts are preserved separately, not replaced by LLM output", "A stronger local model can be substituted in project_config.json"], 720, 304, 430, 58);
+  bullet(s, ["The model summarizes storyboard, continuity risks, and refinement strategy", "Source prompts are preserved separately from refined prompts", "A stronger local model can be substituted in project_config.json"], 720, 304, 430, 58);
 
   s = p.slides.add();
   chrome(s);
-  title(s, "Prompt Artifacts", "The outputs show the actual Code/NLP work.", "The generated files are reviewable and can be regenerated from the workbook.");
+  title(s, "Prompt Artifacts", "The outputs show source evidence and refinement.", "The generated files are reviewable and can be regenerated from the workbook.");
   stat(s, "Shots", "9", 92, 250, 180, C.red);
-  stat(s, "Prompt table", "CSV", 302, 250, 210, C.blue);
+  stat(s, "Prompt tables", "Source + refined CSV", 302, 250, 210, C.blue);
   stat(s, "Iteration log", "Markdown + JSON", 542, 250, 260, C.green);
   stat(s, "Manifest", "All paths + assets", 832, 250, 260, C.amber);
-  code(s, `data/output/prompt_table.csv\n- shot id\n- tool\n- method\n- image prompt\n- video prompt\n- reference path\n- output path\n\ndata/output/iteration_log.md\n- continuity issue\n- timing issue\n- revised prompt target`, 110, 380, 940, 220);
+  code(s, `data/output/source_prompt_table.csv\n- original workbook prompts\n- declared reference paths\n- declared generated clips\n\ndata/output/refined_prompt_table.csv\n- source prompt\n- refined manual-upload prompt\n- continuity and asset constraints\n\ndata/output/refinement_report.md\n- shot readiness\n- risks\n- Ollama refinement summary`, 110, 380, 940, 220);
 
   s = p.slides.add();
   chrome(s);
@@ -224,7 +224,7 @@ async function buildDeck() {
 
   s = p.slides.add();
   chrome(s);
-  title(s, "Reproducibility", "The repo can be rerun from the command line.", "A reviewer can rebuild the config and output files without video-platform credentials.");
+  title(s, "Reproducibility", "The repo can be rerun from the command line.", "A reviewer can rebuild the config, source tables, and refined prompt package without video-platform credentials.");
   code(s, `pip install -r requirements.txt\nollama pull gemma3:1b\nollama serve\n\npython src/build_config_from_workbook.py \\\n  --workbook data/input/prompt_image_video.xlsx \\\n  --input-dir data/input \\\n  --output data/input/project_config.json\n\npython src/main.py --config data/input/project_config.json --output data/output`, 92, 280, 720, 270);
   bullet(s, ["WeDaVinci, PixVerse, and Seedance remain manual", "Final video is stored as data/input/media/final_video.mp4", "No cookies or private platform credentials are committed"], 850, 312, 330, 58);
 

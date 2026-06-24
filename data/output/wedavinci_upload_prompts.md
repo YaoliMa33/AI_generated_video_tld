@@ -1,9 +1,10 @@
-# WeDaVinci Manual Upload Prompts
+# Refined Manual Upload Prompts
 
-This file was generated from the local project configuration, original prompt workbook, and Ollama output.
+This file was generated from the local project configuration, original prompt workbook, declared reference assets, existing clips, and Ollama output.
+It is a 0.5-to-1 refinement package: the source prompts are preserved, and the manual-upload prompts add continuity and asset constraints.
 Video generation is manual and is not automated by this repository.
 
-## Source Prompt Table
+## Refined Prompt Package
 
 ### s1-1: Office establishing shot
 
@@ -12,13 +13,43 @@ Video generation is manual and is not automated by this repository.
 - Image reference: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png
 - Video output: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-3-selected.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s1-1.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-3-selected.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights flickering overhead, rows of desks stretching into shadow, blue holographic building models rotating silently
+
+Refinement constraints:
+- Keep the declared shot id and story position: s1-1.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-1/variant-3-selected.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s1-2: Office pressure and upload routine
 
@@ -27,8 +58,11 @@ Wide establishing shot of the @ArchitectureDataOffice, cold fluorescent lights f
 - Image reference: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png
 - Video output: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-2-selected.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 [Shot]
 Type: Overhead wide shot of the office, slowly pushing in toward the protagonist
 Movement: Push-in (slow)
@@ -100,8 +134,23 @@ Negative words:No obvious disasters, such as explosions or similar large-scale d
 
  @Protagonist @Device
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s1-2.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-2-selected.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 [Shot]
 Type: Overhead wide shot of the office, slowly pushing in toward the protagonist
 Movement: Push-in (slow)
@@ -172,6 +221,18 @@ Sensory texture description: Harsh, husky light; cold metallic texture
 Negative words:No obvious disasters, such as explosions or similar large-scale destruction.
 
  @Protagonist @Device
+
+Refinement constraints:
+- Keep the declared shot id and story position: s1-2.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-2/variant-2-selected.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s1-3: Emergency alert interruption
 
@@ -180,8 +241,11 @@ Negative words:No obvious disasters, such as explosions or similar large-scale d
 - Image reference: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png
 - Video output: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-3-selected.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 0-1 seconds:
 Several short, sharp warning beeps suddenly ring out across the office: beep, beep, beep. A red warning interface flashes onto the main monitor. The cold white fluorescent lights begin to flicker, and the red emergency warning light starts rotating.
 
@@ -204,8 +268,23 @@ The boss’s expression becomes cold, forceful, and bureaucratic again. The prot
 
 Vertical 9:16 aspect ratio.
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s1-3.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-3-selected.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 0-1 seconds:
 Several short, sharp warning beeps suddenly ring out across the office: beep, beep, beep. A red warning interface flashes onto the main monitor. The cold white fluorescent lights begin to flicker, and the red emergency warning light starts rotating.
 
@@ -227,6 +306,18 @@ Boss says:
 The boss’s expression becomes cold, forceful, and bureaucratic again. The protagonist freezes halfway through standing, caught between the instinct to evacuate and the pressure to obey.
 
 Vertical 9:16 aspect ratio.
+
+Refinement constraints:
+- Keep the declared shot id and story position: s1-3.
+- Keep the manual generation tool and method: wedavinci / text to image to video in Wedavinci.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-1.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-1-The_Weight_of_Meaningless_Work/shot-3/variant-3-selected.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s2-1: Fist close-up
 
@@ -235,8 +326,11 @@ Vertical 9:16 aspect ratio.
 - Image reference: source_package/video_prompt_package/work_records/S2S1_hands.png
 - Video output: source_package/video_prompt_package/work_records/the_last_data_assets/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 3 second：His fingers slowly curl inward.
 
 The fist tightens.
@@ -247,8 +341,23 @@ Veins become visible beneath the skin.
 
 A slight tremor runs through his hand. with professional cinematography and dramatic lighting
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s2-1.
+- Keep the manual generation tool and method: wedavinci / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/S2S1_hands.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 3 second：His fingers slowly curl inward.
 
 The fist tightens.
@@ -258,6 +367,18 @@ Knuckles turn white.
 Veins become visible beneath the skin.
 
 A slight tremor runs through his hand. with professional cinematography and dramatic lighting
+
+Refinement constraints:
+- Keep the declared shot id and story position: s2-1.
+- Keep the manual generation tool and method: wedavinci / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/S2S1_hands.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-4-Scene_2_hit/shot-1/variant-1-selected.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s2-2: Explosion transition
 
@@ -266,13 +387,39 @@ A slight tremor runs through his hand. with professional cinematography and dram
 - Image reference: not declared
 - Video output: not declared
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Based on the final frame of the previous video:
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s2-2.
+- Keep the manual generation tool and method: PixVerse.ai / 4 seconds. The apocalypse begins: an explosion erupts, sending shockwaves and dust through the scene. Flames rush toward the camera, glass shatters, and the debris completely covers the entire frame..
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Based on the final frame of the previous video:
+
+Refinement constraints:
+- Keep the declared shot id and story position: s2-2.
+- Keep the manual generation tool and method: PixVerse.ai / 4 seconds. The apocalypse begins: an explosion erupts, sending shockwaves and dust through the scene. Flames rush toward the camera, glass shatters, and the debris completely covers the entire frame..
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s2-3: Confrontation with boss
 
@@ -281,8 +428,11 @@ Based on the final frame of the previous video:
 - Image reference: source_package/video_prompt_package/work_records/S2S2_hit.png
 - Video output: source_package/video_prompt_package/work_records/the_last_data_assets/scene-5-Scene_5/shot-1/variant-1-selected.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 in the same @Officefull  @Protagonist rushes forward, grabs the @Boss by the collar, and violently slams him onto the office desk.
 
 The desk shakes from the impact. Documents, architectural drawings, folders, and office supplies scatter across the floor.
@@ -309,8 +459,23 @@ Alarm sirens become faster and more urgent. Background music rises toward a clim
 
 Cinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals.
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s2-3.
+- Keep the manual generation tool and method: wedavinci / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/S2S2_hit.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-5-Scene_5/shot-1/variant-1-selected.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 in the same @Officefull  @Protagonist rushes forward, grabs the @Boss by the collar, and violently slams him onto the office desk.
 
 The desk shakes from the impact. Documents, architectural drawings, folders, and office supplies scatter across the floor.
@@ -336,6 +501,18 @@ Outside the floor-to-ceiling windows, distant fires grow larger with every secon
 Alarm sirens become faster and more urgent. Background music rises toward a climax.
 
 Cinematic photorealism, intense dramatic confrontation, emotional breakdown, handheld camera movement, flashing red emergency lights mixed with blue futuristic technology lighting, escalating tension, apocalyptic atmosphere, film-quality visuals.
+
+Refinement constraints:
+- Keep the declared shot id and story position: s2-3.
+- Keep the manual generation tool and method: wedavinci / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared image reference as visual evidence: source_package/video_prompt_package/work_records/S2S2_hit.png.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/the_last_data_assets/scene-5-Scene_5/shot-1/variant-1-selected.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s3-1: Waking in the ruins
 
@@ -344,8 +521,11 @@ Cinematic photorealism, intense dramatic confrontation, emotional breakdown, han
 - Image reference: not declared
 - Video output: source_package/video_prompt_package/work_records/selected_video_clips/s3-1_wake.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 黑屏开始。强烈耳鸣、沉重呼吸、远处建筑坍塌声与金属摩擦声。第一人称视角。眼皮半睁半闭，黑色眼皮阴影遮挡视野。第一次睁眼仅睁开一半又无力闭合，随后缓慢重新睁开。画面逐渐显现，模糊失焦，轻微重影，焦点不断恢复。最终聚焦到废墟中的天空视角。一镜到底，真实人类昏迷后苏醒效果。
 镜头1
 第一人称视角保持不变。主人公用双手撑住地面缓慢起身，镜头从仰躺视角逐渐抬升至坐姿视角。视线从天空转向前方废墟。越来越多毁灭后的城市进入视野。真实人体运动轨迹，轻微晃动与呼吸感，一镜到底。
@@ -355,8 +535,22 @@ Image prompt:
 保持同一主人公与同一城市布局。镜头持续向后平稳移动，同时缓慢向斜上方升高。从中景逐渐变为远景。城市尺度不断扩大。越来越多毁灭后的建筑进入画面。主人公比例持续缩小。最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。电影级无人机运镜。
 镜头4
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s3-1.
+- Keep the manual generation tool and method: seedance / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/selected_video_clips/s3-1_wake.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 黑屏开始。强烈耳鸣、沉重呼吸、远处建筑坍塌声与金属摩擦声。第一人称视角。眼皮半睁半闭，黑色眼皮阴影遮挡视野。第一次睁眼仅睁开一半又无力闭合，随后缓慢重新睁开。画面逐渐显现，模糊失焦，轻微重影，焦点不断恢复。最终聚焦到废墟中的天空视角。一镜到底，真实人类昏迷后苏醒效果。
 镜头1
 第一人称视角保持不变。主人公用双手撑住地面缓慢起身，镜头从仰躺视角逐渐抬升至坐姿视角。视线从天空转向前方废墟。越来越多毁灭后的城市进入视野。真实人体运动轨迹，轻微晃动与呼吸感，一镜到底。
@@ -365,6 +559,17 @@ Video prompt:
 镜头3
 保持同一主人公与同一城市布局。镜头持续向后平稳移动，同时缓慢向斜上方升高。从中景逐渐变为远景。城市尺度不断扩大。越来越多毁灭后的建筑进入画面。主人公比例持续缩小。最终形成高空俯瞰视角，完整展现毁灭后的未来城市全貌。电影级无人机运镜。
 镜头4
+
+Refinement constraints:
+- Keep the declared shot id and story position: s3-1.
+- Keep the manual generation tool and method: seedance / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/selected_video_clips/s3-1_wake.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s3-2: Activating the civilization archive hard drive
 
@@ -373,8 +578,11 @@ Video prompt:
 - Image reference: not declared
 - Video output: not declared
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Main subjects:
 
 Scene:
@@ -405,8 +613,21 @@ The scene ends the moment the scan is completed, setting up the next sequence in
 
 This is Scene S3-2: Activating the Hard Drive.
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s3-2.
+- Keep the manual generation tool and method: PixVerse.ai / .
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 Main subjects:
 
 Scene:
@@ -436,6 +657,16 @@ A low electronic startup sound begins. Instantly, a blue indicator light along t
 The scene ends the moment the scan is completed, setting up the next sequence in which the holographic system activates.
 
 This is Scene S3-2: Activating the Hard Drive.
+
+Refinement constraints:
+- Keep the declared shot id and story position: s3-2.
+- Keep the manual generation tool and method: PixVerse.ai / .
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ### s4: One-shot reconstruction
 
@@ -444,8 +675,11 @@ This is Scene S3-2: Activating the Hard Drive.
 - Image reference: not declared
 - Video output: source_package/video_prompt_package/work_records/selected_video_clips/s4_seedance_onecut.mp4
 
-Image prompt:
+Refined image prompt:
 
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 固定镜头。 世界末日后的废墟。 教堂已经坍塌。 地面布满碎石和残骸。 浓烟缓慢飘动。 空气中漂浮灰尘。 远处偶尔有火光。 超写实。 电影级灾难场景。
 镜头1
 固定镜头。 废墟地面开始出现蓝色扫描光。 无数蓝色粒子从地下升起。 从无到有，光影迅速构建出建筑的轮廓线条，并按顺时针快转动。蓝色的全息网格向上快速生长、扫描，最终形成完整的全息建筑影像，发光强度高，科技感。 
@@ -462,8 +696,22 @@ Image prompt:
 镜头8
 镜头9
 
-Video prompt:
+Refinement constraints:
+- Keep the declared shot id and story position: s4.
+- Keep the manual generation tool and method: seedance / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/selected_video_clips/s4_seedance_onecut.mp4.
 
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
+
+Refined video prompt:
+
+Refined manual-upload prompt based on the existing source material.
+
+Source prompt:
 固定镜头。 世界末日后的废墟。 教堂已经坍塌。 地面布满碎石和残骸。 浓烟缓慢飘动。 空气中漂浮灰尘。 远处偶尔有火光。 超写实。 电影级灾难场景。
 镜头1
 固定镜头。 废墟地面开始出现蓝色扫描光。 无数蓝色粒子从地下升起。 从无到有，光影迅速构建出建筑的轮廓线条，并按顺时针快转动。蓝色的全息网格向上快速生长、扫描，最终形成完整的全息建筑影像，发光强度高，科技感。 
@@ -479,34 +727,53 @@ Video prompt:
 一道巨大的蓝色扫描波从眼前向远方扩散。 扫描波经过的区域开始出现建筑轮廓。 无数建筑同时生长。 蓝色全息线框从废墟中升起。 街区被重新绘制。 道路轮廓显现。 桥梁生成。 历史建筑重建。 现代建筑重建。 整个城市同时被构建。 仿佛正在重新绘制文明。
 镜头8
 镜头9
+
+Refinement constraints:
+- Keep the declared shot id and story position: s4.
+- Keep the manual generation tool and method: seedance / image to video.
+- Keep the target aspect ratio: 9:16.
+- Preserve the existing protagonist, boss, office, ruins, hard drive, and reconstruction continuity when they are present in the source prompt.
+- Do not add new scenes, characters, props, dialogue, or video-platform actions that are not supported by the source workbook.
+- Use the declared generated clip as the existing production state: source_package/video_prompt_package/work_records/selected_video_clips/s4_seedance_onecut.mp4.
+
+Production instruction:
+Improve consistency, motion clarity, camera continuity, and tool readability while preserving the source scene and declared assets.
 
 ## Ollama Storyboard Summary
 
-Okay, here's a Markdown storyboard summary based on the provided metadata and instructions:
+## Refinement Summary: The Last Data - Half-Finished AI Video Production
 
-**Story Storyboard Summary:**
+This project is currently in a state of refinement, focusing on enhancing the visual storytelling and technical execution.  The core narrative revolves around Protagonist and Boss grappling with the implications of an extinction-level event – the collapse of civilization data. This requires careful attention to shot composition, prompt consistency, and workflow integration. The AI video production pipeline is currently being refined through iterative prompting and manual tool usage.
 
-**Story Premise:** The Last Data protagonist, tasked with rebuilding civilization through data archiving, confronts escalating conflict with their boss amidst a catastrophic extinction event.  The narrative focuses on the meticulous process of transforming fragmented data into holographic architecture as a symbolic act of remembrance and control.
+**Story Premise:** The protagonist, a Data Worker, discovers a hard drive containing the remnants of a lost Civilization Archive.  This archive holds the blueprints for rebuilding society after a catastrophic event. Protagonist and Boss are tasked with this reconstruction as the world collapses around them.
 
 **Shot-by-Shot Storyboard:**
 
-1. **Office Establishing Shot (s1-1):** Protagonist stands in an office, looking at a large screen displaying complex schematics.  The scene establishes the setting – a sterile, functional space dedicated to data processing. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on architectural design and data visualization.
-2. **Office Pressure and Upload Routine (s1-2):** Protagonist is performing an automated upload sequence within the office, emphasizing the repetitive nature of the task.  The scene shows a digital interface displaying progress bars and alerts. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on data transfer and monitoring.
-3. **Emergency Alert Interruption (s1-3):** A sudden, dramatic interruption of the upload process – perhaps a system error or alert – is captured as a quick cut. Tool: Wedavinci. Method: Text to Image to Video - "text to image" with focus on visual disruption and urgency.
-4. **Fist Close-Up (s2-1):** A close-up of the protagonist's face, conveying a sense of determination despite the circumstances. Tool: Wedavinci. Method: Image to Video – “image to video” focusing on facial expression.
-5. **Explosion Transition (s2-2):**  A fast-paced explosion sequence triggered by an emergency alert. The scene utilizes a 4-second burst, emphasizing chaos and destruction. Tool: PixVerse.ai. Method: "4 seconds. The apocalypse begins..." – “4 seconds” - “image to video”.
-6. **Confrontation with Boss (s2-3):** Protagonist confronts their boss amidst the aftermath of the explosion.  The scene is a dynamic, tense interaction. Tool: Wedavinci. Method: "Image to Video" – "image to video" focusing on visual conflict and power dynamics.
-7. **Waking in the Ruins (s3-1):** The protagonist awakens within the ruins, examining fragmented data fragments.  The scene highlights a sense of loss and reconstruction. Tool: Seedance. Method: “Image to Video” – "image to video" focusing on visual decay and discovery.
-8. **Activating the Civilization Archive Hard Drive (s3-2):** The protagonist activates the civilization archive hard drive, initiating data retrieval.  Tool: PixVerse.ai. Method: "Image to Video" - “image to video” – “image to video” focusing on digital activation and data recovery.
-9. **One-Shot Reconstruction (s4):** A single shot showcasing a quick reconstruction of the initial state of the city, emphasizing the holographic architecture. Tool: Seedance. Method: "Image to Video" - “image to video” – “image to video” focusing on visual representation of the rebuilding process.
+*   **s1-1:** "Office establishing shot" - *Tool: Wedavinci*. – Focus on a large, slightly dilapidated office space, emphasizing dust motes and muted lighting to establish the setting of the future.  The composition should convey a sense of decay and isolation.
+*   **s1-2:** “Office pressure and upload routine” - *Tool: Wedavinci*. – A fast-paced sequence depicting the protagonist manually uploading data from the hard drive, emphasizing movement and urgency. Utilize quick cuts to highlight the process.
+*   **s1-3:** "Emergency alert interruption" - *Tool: Wedavinci*. –  A dramatic, chaotic scene showing a simulated emergency alert triggered by the archive's contents. The visual should convey shock and potential danger.
+*   **s2-1:** “Fist close-up” - *Tool: Wedavinci*. – A close-up of the protagonist’s face, conveying determination or weariness as they examine the hard drive.  Focus on subtle details to establish character presence.
+*   **s2-2:** "Explosion transition" - *Tool: PixVerse.ai*. – This shot will use a 4-second sequence to depict an explosion erupting from the scene, sending shockwaves and dust through the area. The camera should be angled downwards to emphasize the scale of the destruction.
+*   **s2-3:** "Confrontation with boss" - *Tool: Wedavinci*. – Protagonist facing Boss in a dimly lit room. Focus on the protagonist's posture, conveying a sense of conflict and perhaps apprehension.  The lighting should be stark and create shadows to emphasize the tension.
+*   **s3-1:** "Waking in the ruins" - *Tool: Seedance*. – A wide shot showcasing the protagonist emerging from rubble, looking at the archive hard drive. The composition should highlight the vastness of the ruined landscape.
+*    **s3-2:** “Activating the civilization archive hard drive” - *Tool: PixVerse.ai*. –  A slow, deliberate sequence showing the process of activating the hard drive, highlighting the data being restored. Use a color palette that shifts from muted to brighter tones as it's activated.
+*   **s4:** "One-shot reconstruction" - *Tool: Seedance*. – A single shot showcasing the complete archive hard drive and its contents. The composition should be visually striking, emphasizing the scale of the data.
+
+**Manual Video Production Notes (WeDaVinci & PixVerse.ai):**
+
+*   Utilize WeDaVinci for initial text-to-image generation based on the story outline.
+*   Employ PixVerse.ai to create the final video segments, focusing on establishing a consistent visual style and pacing.  Specifically, prioritize smooth transitions between shots.
+*   Maintain shot order throughout the entire production – this is crucial for narrative cohesion.
+*   Carefully attribute all tools used (WeDaVinci, PixVerse.ai) consistently.
 
 **Continuity Risks:**
 
-*   **Data Integrity:** Ensuring the accuracy and consistency of the data being uploaded throughout the sequence is crucial.  Potential for inconsistencies or corrupted data could impact the final result.
-*   **WeDaVinci Stability:** The success of this workflow depends on WeDaVinci's stability during the text-to-video conversion process. Potential for glitches, errors, or unexpected behavior needs to be addressed.
-*   **Visual Cohesion:** Maintaining a consistent visual style and aesthetic across all shots is important.  The explosion sequence requires careful attention to detail to avoid jarring transitions.
-*   **Boss's Emotional State:** The protagonist’s emotional state (determination, grief) should remain consistently conveyed throughout the video. Subtle shifts in expression could be crucial for narrative impact.
+*   Potential inconsistencies in lighting and color grading across different scenes will require careful attention during post-production.
+*   The transition between the initial text-to-image generation and the final video segments needs to be seamless – ensure smooth transitions are implemented.  A slight delay or visual stutter could disrupt the flow of the narrative.
 
----
+**Refinement Strategy:**
 
-Let me know if you would like any adjustments or further refinements!
+Phase 1 (0.5 - 1 refinement): Focus on refining the composition of s2-2, particularly the explosion transition and the confrontation scene.  Iterate on the lighting to enhance the dramatic impact. Refine shot transitions between scenes – ensure a consistent flow.
+Phase 2 (0.5 - 1 refinement):  Strengthen the visual storytelling through more detailed character expressions and subtle environmental cues.  Fine-tune the color palette for greater emotional resonance. Address any potential inconsistencies in the generated clips.
+
+**Note:** This summary prioritizes establishing a solid foundation for the AI video production. Further iteration will be driven by feedback from the initial shot list and the generated content.
