@@ -4,6 +4,7 @@ This repository contains the code and documentation for a two-part AI video assi
 
 1. **0-to-0.5 script-to-prompt generation**: start from a story script and generate an initial shot plan, text-to-image prompts, and image-to-video prompts.
 2. **0.5-to-1 asset-grounded refinement**: use the existing prompt workbook, reference images, selected generated clips, and iteration notes to validate and refine the production package.
+3. **Feedback-driven prompt iteration**: after manually reviewing a generated image or video, write problem records and optimization suggestions; the code detects those feedback files and writes the next-round optimized prompt table.
 
 Part 1 is the **Code/NLP Workflow**. Python programs read the source script, prompt workbook, scene notes, reference images, generated clip paths, and iteration notes. They call a local Ollama LLM API and save generated prompts, source prompts, refined prompts, a storyboard/refinement summary, production manifest, and iteration log.
 
@@ -35,6 +36,7 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 |-- src/
 |   |-- generate_from_script.py
 |   |-- build_config_from_workbook.py
+|   |-- iterate_prompts.py
 |   |-- main.py
 |   `-- ollama_client.py
 |-- data/
@@ -46,6 +48,7 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 |   |   |-- project_config.example.json
 |   |   |-- media/
 |   |   |   `-- final_video.mp4
+|   |   |-- problem_records/
 |   |   `-- source_package/
 |   `-- output/
 |       |-- prompt_table.csv
@@ -59,7 +62,8 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 |       |-- iteration_log.json
 |       |-- production_manifest.json
 |       |-- storyboard.json
-|       `-- wedavinci_upload_prompts.md
+|       |-- wedavinci_upload_prompts.md
+|       `-- iterations/
 |-- docs/
 |   `-- technical_documentation.md
 `-- presentation/
@@ -70,6 +74,7 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 | `src/generate_from_script.py` | Stage 1: generates a first shot/prompt plan from `story_script.md` |
 | `src/build_config_from_workbook.py` | Converts the prompt workbook into `data/input/project_config.json` |
 | `src/main.py` | Validates the config, calls Ollama, writes source prompt artifacts, and generates refined manual-upload prompts |
+| `src/iterate_prompts.py` | Detects human problem records and writes next-round optimized prompts |
 | `src/ollama_client.py` | Local Ollama HTTP API client |
 | `data/input/prompt_image_video.xlsx` | Original prompt/process workbook |
 | `data/input/source_package/` | Original prompt package with reference images and generated clips |
@@ -152,6 +157,20 @@ python src/main.py --config data/input/project_config.json --output data/output
 
 The scripts write the generated prompt table, source prompt table, refined prompt table, iteration log, storyboard/refinement summary, production manifest, and manual upload prompt package to `data/output/`.
 
+After manually reviewing a generated image or video, write feedback in `data/input/problem_records/` and run:
+
+```bash
+python src/iterate_prompts.py --feedback-dir data/input/problem_records --prompt-table data/output/refined_prompt_table.csv --output-dir data/output/iterations --round-id round_01
+```
+
+This writes:
+
+- `data/output/iterations/round_01/next_prompt_table.csv`
+- `data/output/iterations/round_01/iteration_report.md`
+- `data/output/iterations/round_01/iteration_manifest.json`
+
+The iteration script does not generate images or videos. It only creates the next-round prompt package based on human problem records and optimization directions.
+
 ## Input Files
 
 | File | Location | Description |
@@ -160,10 +179,11 @@ The scripts write the generated prompt table, source prompt table, refined promp
 | `prompt_image_video.xlsx` | `data/input/prompt_image_video.xlsx` | Original workbook containing prompt process, final prompts, tool choices, reference paths, and output paths |
 | `project_config.json` | `data/input/project_config.json` | Structured config generated from the workbook |
 | `workbook_nonempty_cells.json` | `data/input/workbook_nonempty_cells.json` | Audit extraction of non-empty workbook cells |
+| Problem records | `data/input/problem_records/` | Human-written issues and optimization directions after reviewing generated media |
 | Reference images and clips | `data/input/source_package/` | Original production assets and selected generated clips |
 | Final video | `data/input/media/final_video.mp4` | Final exported video |
 
-All declared media paths are validated. If a path is declared but the file does not exist, the program stops with an explicit error.
+Declared media paths are validated in Stage 2 because the refinement step claims to be grounded in existing images and clips. The validation does not prove that a video was generated from a specific prompt; it only prevents the workflow from citing missing assets as evidence. If a declared reference path is wrong, the program stops instead of producing an unsupported refinement package.
 
 ## Output Files
 
@@ -181,6 +201,8 @@ All declared media paths are validated. If a path is declared but the file does 
 | `production_manifest.json` | `data/output/production_manifest.json` | Project metadata, shot count, declared assets, and generated file list |
 | `storyboard.json` | `data/output/storyboard.json` | Raw Ollama storyboard summary output |
 | `wedavinci_upload_prompts.md` | `data/output/wedavinci_upload_prompts.md` | Human-readable prompt package for manual video-tool upload |
+| `next_prompt_table.csv` | `data/output/iterations/<round_id>/next_prompt_table.csv` | Next-round prompts generated from human problem records and optimization suggestions |
+| `iteration_report.md` | `data/output/iterations/<round_id>/iteration_report.md` | Shot-level summary of detected feedback and revision strategy |
 
 ## Reproducing the Results
 
@@ -193,7 +215,9 @@ All declared media paths are validated. If a path is declared but the file does 
 7. Run `src/main.py` to generate the Stage 2 refinement outputs in `data/output/`.
 8. Review `generated_prompt_table.csv`, `source_prompt_table.csv`, `refined_prompt_table.csv`, and `refinement_report.md`.
 9. Manually upload or paste the selected refined prompts into WeDaVinci, PixVerse.ai, Seedance, or another chosen AI video tool.
-10. Save generated clips, edit them manually, and export the final video.
+10. If the generated media is unsatisfactory, write feedback in `data/input/problem_records/` and run `src/iterate_prompts.py`.
+11. Use `data/output/iterations/<round_id>/next_prompt_table.csv` for the next manual generation attempt.
+12. Save generated clips, edit them manually, and export the final video.
 
 ## Additional Documentation
 

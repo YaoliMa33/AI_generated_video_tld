@@ -1,0 +1,20 @@
+{
+  "workflow_stage": "feedback-driven prompt iteration",
+  "round_id": "round_01",
+  "asset_policy": "This stage reads human feedback and writes next-round prompt artifacts only. It does not create, modify, or replace image/video assets.",
+  "feedback_documents": [
+    {
+      "path": "data/input/problem_records/round_01_example.md",
+      "detected_shot_ids": [
+        "s1-2",
+        "s3-1"
+      ]
+    }
+  ],
+  "shot_count": 9,
+  "generated_files": [
+    "iterations/round_01/next_prompt_table.csv",
+    "iterations/round_01/iteration_report.md",
+    "iterations/round_01/iteration_manifest.json"
+  ]
+}
