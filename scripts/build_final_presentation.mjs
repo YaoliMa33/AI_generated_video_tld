@@ -177,6 +177,24 @@ async function buildDeck() {
 
   s = p.slides.add();
   chrome(s);
+  title(s, "Technical Highlights", "How code supports the video workflow.", "The project uses Python and a local LLM API to make prompt generation, refinement, and iteration reproducible.");
+  const highlights = [
+    ["1", "Two-stage prompt workflow", "Story script to initial prompts, then asset-grounded refinement using existing images, clips, and review notes."],
+    ["2", "Local Ollama API", "A local LLM call generates and refines prompt text without private cloud API keys."],
+    ["3", "Prompt table tracker", "Each shot keeps image prompts, motion prompts, visual style, problem notes, and revised prompts."],
+    ["4", "Human-in-the-loop iteration", "Problem records are detected automatically and converted into next-round optimized prompts."],
+    ["5", "Manual production boundary", "WeDaVinci, PixVerse, and Seedance are used manually; code handles prompts, documentation, and reproducibility."],
+  ];
+  highlights.forEach(([num, head, body], i) => {
+    const yy = 324 + i * 58;
+    rect(s, 92, yy, 54, 46, i === 1 ? C.blue : i === 3 ? C.green : C.red, "none", 8);
+    text(s, num, 92, yy + 11, 54, 24, { fontSize: 20, bold: true, color: C.pale, alignment: "center" });
+    text(s, head, 174, yy - 2, 360, 24, { fontSize: 20, bold: true, color: C.ink });
+    text(s, body, 174, yy + 28, 880, 32, { fontSize: 16, color: C.muted });
+  });
+
+  s = p.slides.add();
+  chrome(s);
   title(s, "Repository", "The GitLab repo is the reproducibility layer.", "All important inputs and generated outputs are stored with explicit paths.");
   code(s, `src/\n  generate_from_script.py\n  build_config_from_workbook.py\n  main.py\n  iterate_prompts.py\n  ollama_client.py\n\ndata/input/\n  story_script.md\n  prompt_image_video.xlsx\n  problem_records/\n  source_package/\n\ndata/output/\n  generated_prompt_table.csv\n  refined_prompt_table.csv\n  iterations/round_01/next_prompt_table.csv`, 86, 300, 520, 300);
   bullet(s, ["Story script drives Stage 1 prompt generation", "Workbook and assets ground Stage 2 refinement", "Problem records drive Stage 3 next-round prompts"], 700, 318, 430, 58);

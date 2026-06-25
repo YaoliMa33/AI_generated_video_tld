@@ -1,6 +1,6 @@
 # The Last Data
 
-This repository contains the code and documentation for a two-part AI video assignment workflow. The Code/NLP part is now framed as a **two-stage 0-to-1 prompt workflow**:
+This repository contains the code and documentation for a two-part AI video assignment workflow. The Code/NLP part is framed as a **two-stage 0-to-1 prompt workflow with feedback-driven iteration**:
 
 1. **0-to-0.5 script-to-prompt generation**: start from a story script and generate an initial shot plan, text-to-image prompts, and image-to-video prompts.
 2. **0.5-to-1 asset-grounded refinement**: use the existing prompt workbook, reference images, selected generated clips, and iteration notes to validate and refine the production package.
@@ -11,6 +11,33 @@ Part 1 is the **Code/NLP Workflow**. Python programs read the source script, pro
 Part 2 is the **Manual AI Video Production Workflow**. The final prompts are entered manually into AI video tools such as WeDaVinci, PixVerse.ai, and Seedance. The generated clips are saved, edited, and exported as the final video and presentation.
 
 The repository does not automate WeDaVinci, PixVerse.ai, or Seedance access. No platform credentials, cookies, or private API tokens are stored in this project.
+
+## Technical Highlights
+
+1. **Two-Stage Prompt Workflow**
+   - Stage 1 starts from the story script and generates initial image prompts and image-to-video prompts.
+   - Stage 2 uses existing images, generated clips, workbook records, and human review notes to refine the prompt package.
+   - This reflects the real production process: the code supports prompt generation and improvement, while media generation remains a manual creative step.
+
+2. **Local LLM API With Ollama**
+   - The workflow uses a local Ollama API to generate and refine prompt-related text.
+   - The current configuration uses `gemma3:1b` through `http://localhost:11434/api/generate`.
+   - No private cloud API key is required, so another user can rerun the code with their own local Ollama setup.
+
+3. **Prompt Table as Production Tracker**
+   - The output tables organize each shot by shot ID, image prompt, video motion prompt, visual style, source assets, problem notes, and revised prompt.
+   - The tables act as a production tracker for manual upload into AI video tools.
+   - Source prompts and refined prompts are saved separately so the workflow remains auditable.
+
+4. **Human-in-the-Loop Iteration**
+   - After reviewing generated images or videos, the user writes problem records and optimization directions in `data/input/problem_records/`.
+   - The iteration script automatically detects those files and generates the next-round optimized prompt table.
+   - Iteration outputs are saved in `data/output/iterations/<round_id>/` without overwriting previous assets or prompt tables.
+
+5. **Manual AI Video Production Boundary**
+   - WeDaVinci, PixVerse.ai, Seedance, or similar tools are used manually.
+   - Python does not upload prompts, control video-platform accounts, or store platform credentials.
+   - The code is responsible for prompt generation, prompt refinement, documentation, and reproducibility.
 
 ## Authors
 
@@ -67,6 +94,8 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 |-- docs/
 |   `-- technical_documentation.md
 `-- presentation/
+    |-- llm_io_demo.ipynb
+    `-- the-last-data_final_presentation.pptx
 ```
 
 | Path | Description |
@@ -81,11 +110,13 @@ This is not presented as a fully automated video generator. Stage 1 generates pr
 | `data/input/media/final_video.mp4` | Final exported video provided for submission |
 | `data/output/` | Generated prompt table, iteration log, manifest, storyboard, and manual upload package |
 | `docs/` | Technical workflow documentation |
+| `presentation/llm_io_demo.ipynb` | Jupyter demonstration notebook for visualizing feedback-driven prompt iteration |
+| `presentation/the-last-data_final_presentation.pptx` | Final project presentation |
 
 ## Requirements
 
 - Python 3.10 or newer
-- Python package listed in `requirements.txt`: `openpyxl`
+- Python packages listed in `requirements.txt`: `openpyxl`, `pandas`, `notebook`
 - A running local Ollama HTTP service
 - Local Ollama model configured in `data/input/project_config.json`
   - Current local configuration: `gemma3:1b`
@@ -127,35 +158,91 @@ ollama pull gemma3:1b
 ollama serve
 ```
 
-## How to Run the Project
+## How to Run in Terminal
 
-First generate the 0-to-0.5 prompt plan from the story script:
+Terminal execution is the standard reproducible workflow. It writes all generated files to `data/output/`.
+
+### 1. Generate the Stage 1 script-to-prompt plan
+
+Purpose: convert `data/input/story_script.md` into an initial shot plan, image prompts, and image-to-video prompts.
+
+Command:
 
 ```bash
 python src/generate_from_script.py --script data/input/story_script.md --output data/output
 ```
 
-This writes `generated_prompt_table.csv`, `script_to_prompt_plan.md`, and `stage1_generation_manifest.json`. It does not create or modify image/video assets.
+Expected result:
 
-Then rebuild the structured project config from the prompt workbook:
+- `data/output/generated_prompt_table.csv`
+- `data/output/script_to_prompt_plan.md`
+- `data/output/stage1_generation_manifest.json`
+
+Check: open `data/output/generated_prompt_table.csv` and verify that shot-level prompts were written.
+
+This step does not create or modify image/video assets.
+
+### 2. Rebuild the structured project config from the workbook
+
+Purpose: convert the original workbook into `data/input/project_config.json`, which is used by the refinement script.
+
+Command:
 
 ```bash
 python src/build_config_from_workbook.py --workbook data/input/prompt_image_video.xlsx --input-dir data/input --output data/input/project_config.json
 ```
 
-Validate the config without calling Ollama:
+Expected result:
+
+- `data/input/project_config.json`
+
+Check: open `data/input/project_config.json` and verify that shots, prompts, tools, and declared media paths are present.
+
+### 3. Validate the config without calling Ollama
+
+Purpose: check declared paths and config structure before making an LLM call.
+
+Command:
 
 ```bash
 python src/main.py --config data/input/project_config.json --output data/output --dry-run
 ```
 
-Generate the production files through Ollama:
+Expected result:
+
+- the command should finish without path or config errors
+- no new Ollama output is required in this dry run
+
+Check: if this step fails, fix the missing or incorrect declared input path before running the LLM workflow.
+
+`--dry-run` does not call Ollama.
+
+### 4. Generate the Stage 2 refined prompt package through Ollama
+
+Purpose: preserve source prompts, call the local Ollama API, and write refined prompts for manual upload into AI video tools.
+
+Command:
 
 ```bash
 python src/main.py --config data/input/project_config.json --output data/output
 ```
 
-The scripts write the generated prompt table, source prompt table, refined prompt table, iteration log, storyboard/refinement summary, production manifest, and manual upload prompt package to `data/output/`.
+Expected result:
+
+- `data/output/source_prompt_table.csv`
+- `data/output/refined_prompt_table.csv`
+- `data/output/refinement_report.md`
+- `data/output/wedavinci_upload_prompts.md`
+- `data/output/production_manifest.json`
+- `data/output/storyboard.json`
+
+Check: open `data/output/refined_prompt_table.csv` and `data/output/refinement_report.md`.
+
+This command calls Ollama.
+
+### 5. Generate a next-round prompt table from human feedback
+
+Purpose: convert written problem records and optimization directions into next-round prompts.
 
 After manually reviewing a generated image or video, write feedback in `data/input/problem_records/` and run:
 
@@ -163,13 +250,47 @@ After manually reviewing a generated image or video, write feedback in `data/inp
 python src/iterate_prompts.py --feedback-dir data/input/problem_records --prompt-table data/output/refined_prompt_table.csv --output-dir data/output/iterations --round-id round_01
 ```
 
-This writes:
+Expected result:
 
 - `data/output/iterations/round_01/next_prompt_table.csv`
 - `data/output/iterations/round_01/iteration_report.md`
 - `data/output/iterations/round_01/iteration_manifest.json`
 
-The iteration script does not generate images or videos. It only creates the next-round prompt package based on human problem records and optimization directions.
+Check: open `data/output/iterations/round_01/next_prompt_table.csv` and compare it with `data/output/refined_prompt_table.csv`.
+
+This command calls Ollama. The iteration script does not generate images or videos. It only creates the next-round prompt package based on human problem records and optimization directions.
+
+## How to Run in Jupyter
+
+Jupyter execution is the visual demonstration workflow. It calls the same `.py` scripts, displays inputs and outputs below notebook cells, and still writes the generated files to `data/output/`.
+
+Start Jupyter:
+
+```bash
+jupyter notebook presentation/llm_io_demo.ipynb
+```
+
+Then run the notebook cells from top to bottom.
+
+The notebook demonstrates this loop:
+
+```text
+problem_records -> iterate_prompts.py -> local Ollama API -> next-round prompt table
+```
+
+What the notebook shows:
+
+- the project path and selected feedback text,
+- the feedback file written to `data/input/problem_records/<round_id>/feedback.md`,
+- the exact Python command used for iteration,
+- stdout and stderr from `src/iterate_prompts.py`,
+- the output paths under `data/output/iterations/<round_id>/`,
+- a table preview of `next_prompt_table.csv`,
+- the first part of `iteration_report.md`.
+
+Each notebook run generates a timestamped `round_id`, so previous iteration outputs are not overwritten.
+
+The notebook is not a replacement for the project scripts. It is a presentation and inspection layer over the same reproducible `.py` workflow.
 
 ## Input Files
 

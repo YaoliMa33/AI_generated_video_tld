@@ -12,6 +12,50 @@ The method is a **two-stage 0-to-1 prompt workflow**. It does not claim to gener
 
 Stage 1 writes prompt artifacts only. It does not create, replace, or overwrite images or videos. The existing reference images remain the grounding assets for Stage 2 and for manual video generation. The feedback iteration stage also writes prompt artifacts only.
 
+## Technical Highlights
+
+### Two-Stage Prompt Workflow
+
+The workflow is designed as a prompt-production pipeline rather than a direct video-generation system. Stage 1 converts the story script into initial text-to-image and image-to-video prompts. Stage 2 uses the existing workbook, reference images, generated clips, and review notes to refine those prompts for manual production.
+
+This distinction matters methodologically: the code does not pretend that final video generation is automatic. It documents how language-model support is used before and between manual media-generation attempts.
+
+### Local LLM API With Ollama
+
+The project uses a local Ollama API instead of a private cloud API. The current configuration sends requests to `http://localhost:11434/api/generate` with the local model `gemma3:1b`.
+
+This makes the code reproducible without committing private API keys. Another user can rerun the workflow by installing Ollama, pulling the configured model or selecting another local model, and executing the documented Python commands.
+
+### Prompt Table as Production Tracker
+
+The prompt tables are the main production artifact. They organize the work by shot ID and preserve:
+
+- image prompt,
+- video motion prompt,
+- visual style,
+- declared reference image or clip,
+- problem notes,
+- revised prompt,
+- iteration output.
+
+The workflow separates source prompts from refined prompts. This prevents the refinement stage from erasing the original evidence and makes the final prompt table suitable as a production tracker for manual upload into WeDaVinci, PixVerse.ai, Seedance, or another selected video tool.
+
+### Human-in-the-Loop Iteration
+
+The workflow supports a review-and-revision loop. After a generated image or clip is reviewed, the user writes problem records and optimization directions in `data/input/problem_records/`. The iteration script scans that folder, detects shot IDs when present, and writes the next-round prompt table into `data/output/iterations/<round_id>/`.
+
+This turns subjective review feedback into explicit, versioned prompt revisions. The script does not overwrite earlier outputs, images, or videos.
+
+### Manual AI Video Production Boundary
+
+The code does not automate WeDaVinci, PixVerse.ai, Seedance, or any other video platform. It does not upload prompts, log into external services, store cookies, or claim that final clips were generated through a Python API.
+
+The implemented boundary is:
+
+- Python and Ollama: prompt generation, prompt refinement, feedback interpretation, structured documentation.
+- Manual AI video tools: image generation, image-to-video generation, clip selection.
+- Manual editing software: final video assembly and export.
+
 ## Two-Part Workflow
 
 ### Part 1: Code/NLP Workflow
